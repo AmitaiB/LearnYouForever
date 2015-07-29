@@ -7,6 +7,7 @@
 //
 
 #import "LYPLogInViewController.h"
+#import <Parse.h>
 
 @interface LYPLogInViewController () <PFLogInViewControllerDelegate>
 
@@ -31,9 +32,15 @@
 }
 
 -(void)logInViewController:(PFLogInViewController * __nonnull)logInController didLogInUser:(PFUser * __nonnull)user {
-    
+        NSLog(@"We logged in! And know it!");
+    [logInController dismissViewControllerAnimated:YES completion:^{
+        NSLog(@"We'll see ourselves out, thank you");
+    }];
 }
 
+-(void)logInViewController:(PFLogInViewController * __nonnull)logInController didFailToLogInWithError:(nullable NSError *)error {
+    NSLog(@"We failed! With an error: %@", error);
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
