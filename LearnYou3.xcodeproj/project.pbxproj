@@ -18,6 +18,7 @@
 		38E97B4F1B68583D0091BACA /* LY2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E97B4E1B68583D0091BACA /* LY2Constants.m */; };
 		38E97B521B6858540091BACA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E97B511B6858540091BACA /* MasterViewController.m */; };
 		38E97B551B6859760091BACA /* LYPNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E97B541B6859760091BACA /* LYPNavigationController.m */; };
+		38E97B581B685B520091BACA /* LYPLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E97B571B685B520091BACA /* LYPLogInViewController.m */; };
 		F7B0E3A000D76494628C1623 /* libPods-LearnYou3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B34AD5379861FCF6117B38 /* libPods-LearnYou3.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,8 @@
 		38E97B511B6858540091BACA /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		38E97B531B6859760091BACA /* LYPNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPNavigationController.h; sourceTree = "<group>"; };
 		38E97B541B6859760091BACA /* LYPNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPNavigationController.m; sourceTree = "<group>"; };
+		38E97B561B685B520091BACA /* LYPLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPLogInViewController.h; sourceTree = "<group>"; };
+		38E97B571B685B520091BACA /* LYPLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPLogInViewController.m; sourceTree = "<group>"; };
 		50898F66E90BF7D64A377A8C /* Pods-LearnYou3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnYou3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnYou3/Pods-LearnYou3.release.xcconfig"; sourceTree = "<group>"; };
 		D5B34AD5379861FCF6117B38 /* libPods-LearnYou3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnYou3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -105,6 +108,8 @@
 				38E97B461B6858050091BACA /* DetailViewController.h */,
 				38E97B471B6858050091BACA /* DetailViewController.m */,
 				38E97B271B6857370091BACA /* Main.storyboard */,
+				38E97B561B685B520091BACA /* LYPLogInViewController.h */,
+				38E97B571B685B520091BACA /* LYPLogInViewController.m */,
 				38E97B2A1B6857370091BACA /* Images.xcassets */,
 				38E97B2C1B6857370091BACA /* LaunchScreen.xib */,
 				38E97B1A1B6857370091BACA /* Supporting Files */,
@@ -296,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E97B451B6857F30091BACA /* AppDelegate.m in Sources */,
+				38E97B581B685B520091BACA /* LYPLogInViewController.m in Sources */,
 				38E97B4F1B68583D0091BACA /* LY2Constants.m in Sources */,
 				38E97B521B6858540091BACA /* MasterViewController.m in Sources */,
 				38E97B551B6859760091BACA /* LYPNavigationController.m in Sources */,

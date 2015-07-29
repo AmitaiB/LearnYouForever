@@ -8,8 +8,9 @@
 
 #import "LYPNavigationController.h"
 #import <Parse.h>
+#import <ParseUI.h>
 
-@interface LYPNavigationController ()
+@interface LYPNavigationController () <PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
 
 @end
 
@@ -18,7 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//    [PFUser logOut];
+    [PFUser logOut];
     if ([PFUser currentUser]) {
         [self performSegueWithIdentifier:@"nav→MasterSegueID" sender:nil];
     } else {

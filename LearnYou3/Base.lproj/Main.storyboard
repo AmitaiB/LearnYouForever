@@ -66,7 +66,7 @@
         <!--Log In View Controller-->
         <scene sceneID="brs-5T-xx8">
             <objects>
-                <viewController id="8qL-In-GrJ" customClass="PFLogInViewController" sceneMemberID="viewController">
+                <viewController id="8qL-In-GrJ" customClass="LYPLogInViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WRS-60-CEY"/>
                         <viewControllerLayoutGuide type="bottom" id="9RX-Ry-bQl"/>
