@@ -13,9 +13,6 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-
-- (IBAction)doneButtonTapped:(id)sender;
 
 @end
 
@@ -25,8 +22,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.nameLabel.text = @"Loading...";
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -147,6 +142,16 @@
     
 }
 
+- (IBAction)githubButtonTapped:(id)sender {
+    NSMutableString *authURLString = [@"https://github.com/login/oauth/authorize" mutableCopy];
+    [authURLString appendString:@"?client_id=cdd79b714788bbf55a89"];
+    [authURLString appendString:@"&redirect_uri=my-github-app://oauth"];
+    
+    NSURL *url = [NSURL URLWithString:authURLString];
+    
+    [[UIApplication sharedApplication] openURL:url];
+}
+
 - (void)updateNameLabel {
     
     AFOAuthCredential *credential =
@@ -159,11 +164,9 @@
     [manager GET:@"https://api.github.com/user" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog (@"success, %@", responseObject);
         
-        NSDictionary *userDictionary = responseObject;
-        
-        self.nameLabel.text = userDictionary[@"login"];
-        self.nameLabel.alpha = 1;
-        
+//        NSDictionary *userDictionary = responseObject;
+//        
+//        self.nameLabel.text = userDictionary[@"login"];        
         
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {

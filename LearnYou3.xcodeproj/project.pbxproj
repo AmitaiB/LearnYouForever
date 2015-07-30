@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07735D791B6A51C8004F400C /* github-10-512.png in Resources */ = {isa = PBXBuildFile; fileRef = 07735D781B6A51C8004F400C /* github-10-512.png */; };
+		07735D7B1B6A52B4004F400C /* GitHub-Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 07735D7A1B6A52B4004F400C /* GitHub-Logo.png */; };
+		07735D7D1B6A5324004F400C /* Octocat.png in Resources */ = {isa = PBXBuildFile; fileRef = 07735D7C1B6A5324004F400C /* Octocat.png */; };
 		0774D1551B69A9E200F3BCF5 /* RepositoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0774D1541B69A9E200F3BCF5 /* RepositoriesTableViewController.m */; };
 		0774D1581B69AA8500F3BCF5 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0774D1571B69AA8500F3BCF5 /* Constants.m */; };
 		0774D15B1B69AB1E00F3BCF5 /* GithubAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0774D15A1B69AB1E00F3BCF5 /* GithubAPIClient.m */; };
@@ -41,6 +44,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07735D781B6A51C8004F400C /* github-10-512.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "github-10-512.png"; path = "../../github-10-512.png"; sourceTree = "<group>"; };
+		07735D7A1B6A52B4004F400C /* GitHub-Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "GitHub-Logo.png"; sourceTree = "<group>"; };
+		07735D7C1B6A5324004F400C /* Octocat.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Octocat.png; sourceTree = "<group>"; };
 		0774D1531B69A9E200F3BCF5 /* RepositoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoriesTableViewController.h; sourceTree = "<group>"; };
 		0774D1541B69A9E200F3BCF5 /* RepositoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesTableViewController.m; sourceTree = "<group>"; };
 		0774D1561B69AA8500F3BCF5 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
@@ -147,6 +153,9 @@
 				0774D15F1B69AC9100F3BCF5 /* GithubRepository.h */,
 				0774D1601B69AC9100F3BCF5 /* GithubRepository.m */,
 				38E97B2A1B6857370091BACA /* Images.xcassets */,
+				07735D781B6A51C8004F400C /* github-10-512.png */,
+				07735D7C1B6A5324004F400C /* Octocat.png */,
+				07735D7A1B6A52B4004F400C /* GitHub-Logo.png */,
 				38E97B2C1B6857370091BACA /* LaunchScreen.xib */,
 				38E97B1A1B6857370091BACA /* Supporting Files */,
 			);
@@ -285,8 +294,11 @@
 			files = (
 				38E97B4A1B6858250091BACA /* Info.plist in Resources */,
 				38E97B291B6857370091BACA /* Main.storyboard in Resources */,
+				07735D791B6A51C8004F400C /* github-10-512.png in Resources */,
 				38E97B2E1B6857370091BACA /* LaunchScreen.xib in Resources */,
 				38E97B2B1B6857370091BACA /* Images.xcassets in Resources */,
+				07735D7B1B6A52B4004F400C /* GitHub-Logo.png in Resources */,
+				07735D7D1B6A5324004F400C /* Octocat.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
