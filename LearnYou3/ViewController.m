@@ -147,6 +147,16 @@
     
 }
 
+- (IBAction)githubButtonTapped:(id)sender {
+    NSMutableString *authURLString = [@"https://github.com/login/oauth/authorize" mutableCopy];
+    [authURLString appendString:@"?client_id=cdd79b714788bbf55a89"];
+    [authURLString appendString:@"&redirect_uri=my-github-app://oauth"];
+    
+    NSURL *url = [NSURL URLWithString:authURLString];
+    
+    [[UIApplication sharedApplication] openURL:url];
+}
+
 - (void)updateNameLabel {
     
     AFOAuthCredential *credential =
