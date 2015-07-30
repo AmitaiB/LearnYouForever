@@ -13,9 +13,6 @@
 
 @interface ViewController ()
 
-@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-
-- (IBAction)doneButtonTapped:(id)sender;
 
 @end
 
@@ -25,8 +22,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.nameLabel.text = @"Loading...";
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -169,11 +164,9 @@
     [manager GET:@"https://api.github.com/user" parameters:nil success:^(NSURLSessionDataTask *task, id responseObject) {
         NSLog (@"success, %@", responseObject);
         
-        NSDictionary *userDictionary = responseObject;
-        
-        self.nameLabel.text = userDictionary[@"login"];
-        self.nameLabel.alpha = 1;
-        
+//        NSDictionary *userDictionary = responseObject;
+//        
+//        self.nameLabel.text = userDictionary[@"login"];        
         
         
     } failure:^(NSURLSessionDataTask *task, NSError *error) {
