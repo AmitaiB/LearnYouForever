@@ -4,6 +4,8 @@
 target 'LearnYou3' do
 pod 'Parse'
 pod 'ParseUI'
+pod 'AFNetworking'
+pod 'AFOAuth2Manager'
 end
 
 target 'LearnYou3Tests' do

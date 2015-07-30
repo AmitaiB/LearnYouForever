@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0774D1551B69A9E200F3BCF5 /* RepositoriesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0774D1541B69A9E200F3BCF5 /* RepositoriesTableViewController.m */; };
+		0774D1581B69AA8500F3BCF5 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0774D1571B69AA8500F3BCF5 /* Constants.m */; };
+		0774D15B1B69AB1E00F3BCF5 /* GithubAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0774D15A1B69AB1E00F3BCF5 /* GithubAPIClient.m */; };
+		0774D15E1B69AC0000F3BCF5 /* ReposDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 0774D15D1B69AC0000F3BCF5 /* ReposDataStore.m */; };
+		0774D1611B69AC9100F3BCF5 /* GithubRepository.m in Sources */ = {isa = PBXBuildFile; fileRef = 0774D1601B69AC9100F3BCF5 /* GithubRepository.m */; };
+		0774D1641B69AE6B00F3BCF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0774D1631B69AE6B00F3BCF5 /* ViewController.m */; };
+		0774D1661B69B13A00F3BCF5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0774D1651B69B13A00F3BCF5 /* UIKit.framework */; };
+		0774D1681B69B14100F3BCF5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0774D1671B69B14100F3BCF5 /* CoreGraphics.framework */; };
+		0774D16A1B69B14800F3BCF5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0774D1691B69B14800F3BCF5 /* Foundation.framework */; };
 		38E97B291B6857370091BACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B271B6857370091BACA /* Main.storyboard */; };
 		38E97B2B1B6857370091BACA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B2A1B6857370091BACA /* Images.xcassets */; };
 		38E97B2E1B6857370091BACA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B2C1B6857370091BACA /* LaunchScreen.xib */; };
@@ -32,6 +41,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0774D1531B69A9E200F3BCF5 /* RepositoriesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepositoriesTableViewController.h; sourceTree = "<group>"; };
+		0774D1541B69A9E200F3BCF5 /* RepositoriesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepositoriesTableViewController.m; sourceTree = "<group>"; };
+		0774D1561B69AA8500F3BCF5 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		0774D1571B69AA8500F3BCF5 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		0774D1591B69AB1E00F3BCF5 /* GithubAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubAPIClient.h; sourceTree = "<group>"; };
+		0774D15A1B69AB1E00F3BCF5 /* GithubAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubAPIClient.m; sourceTree = "<group>"; };
+		0774D15C1B69AC0000F3BCF5 /* ReposDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReposDataStore.h; sourceTree = "<group>"; };
+		0774D15D1B69AC0000F3BCF5 /* ReposDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReposDataStore.m; sourceTree = "<group>"; };
+		0774D15F1B69AC9100F3BCF5 /* GithubRepository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GithubRepository.h; sourceTree = "<group>"; };
+		0774D1601B69AC9100F3BCF5 /* GithubRepository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GithubRepository.m; sourceTree = "<group>"; };
+		0774D1621B69AE6B00F3BCF5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0774D1631B69AE6B00F3BCF5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0774D1651B69B13A00F3BCF5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0774D1671B69B14100F3BCF5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		0774D1691B69B14800F3BCF5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		18AF0C68C0E2E75E737E88F3 /* Pods-LearnYou3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnYou3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnYou3/Pods-LearnYou3.debug.xcconfig"; sourceTree = "<group>"; };
 		38E97B171B6857370091BACA /* LearnYou3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnYou3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E97B281B6857370091BACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -61,6 +85,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0774D16A1B69B14800F3BCF5 /* Foundation.framework in Frameworks */,
+				0774D1681B69B14100F3BCF5 /* CoreGraphics.framework in Frameworks */,
+				0774D1661B69B13A00F3BCF5 /* UIKit.framework in Frameworks */,
 				F7B0E3A000D76494628C1623 /* libPods-LearnYou3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,8 +132,20 @@
 				38E97B461B6858050091BACA /* DetailViewController.h */,
 				38E97B471B6858050091BACA /* DetailViewController.m */,
 				38E97B271B6857370091BACA /* Main.storyboard */,
+				0774D1621B69AE6B00F3BCF5 /* ViewController.h */,
+				0774D1631B69AE6B00F3BCF5 /* ViewController.m */,
 				38E97B561B685B520091BACA /* LYPLogInViewController.h */,
 				38E97B571B685B520091BACA /* LYPLogInViewController.m */,
+				0774D1531B69A9E200F3BCF5 /* RepositoriesTableViewController.h */,
+				0774D1541B69A9E200F3BCF5 /* RepositoriesTableViewController.m */,
+				0774D1561B69AA8500F3BCF5 /* Constants.h */,
+				0774D1571B69AA8500F3BCF5 /* Constants.m */,
+				0774D1591B69AB1E00F3BCF5 /* GithubAPIClient.h */,
+				0774D15A1B69AB1E00F3BCF5 /* GithubAPIClient.m */,
+				0774D15C1B69AC0000F3BCF5 /* ReposDataStore.h */,
+				0774D15D1B69AC0000F3BCF5 /* ReposDataStore.m */,
+				0774D15F1B69AC9100F3BCF5 /* GithubRepository.h */,
+				0774D1601B69AC9100F3BCF5 /* GithubRepository.m */,
 				38E97B2A1B6857370091BACA /* Images.xcassets */,
 				38E97B2C1B6857370091BACA /* LaunchScreen.xib */,
 				38E97B1A1B6857370091BACA /* Supporting Files */,
@@ -145,6 +184,9 @@
 		65909FE9418CAD600C3151ED /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0774D1691B69B14800F3BCF5 /* Foundation.framework */,
+				0774D1671B69B14100F3BCF5 /* CoreGraphics.framework */,
+				0774D1651B69B13A00F3BCF5 /* UIKit.framework */,
 				D5B34AD5379861FCF6117B38 /* libPods-LearnYou3.a */,
 			);
 			name = Frameworks;
@@ -296,7 +338,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E97B451B6857F30091BACA /* AppDelegate.m in Sources */,
+				0774D1611B69AC9100F3BCF5 /* GithubRepository.m in Sources */,
+				0774D15E1B69AC0000F3BCF5 /* ReposDataStore.m in Sources */,
 				38E97B581B685B520091BACA /* LYPLogInViewController.m in Sources */,
+				0774D15B1B69AB1E00F3BCF5 /* GithubAPIClient.m in Sources */,
+				0774D1551B69A9E200F3BCF5 /* RepositoriesTableViewController.m in Sources */,
+				0774D1641B69AE6B00F3BCF5 /* ViewController.m in Sources */,
+				0774D1581B69AA8500F3BCF5 /* Constants.m in Sources */,
 				38E97B4F1B68583D0091BACA /* LY2Constants.m in Sources */,
 				38E97B521B6858540091BACA /* MasterViewController.m in Sources */,
 				38E97B4C1B68582E0091BACA /* main.m in Sources */,
