@@ -20,12 +20,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [PFUser logOut];
-    if ([PFUser currentUser]) {
-        [self performSegueWithIdentifier:@"nav→MasterSegueID" sender:nil];
-    } else {
-        [self performSegueWithIdentifier:@"nav→LogInSegueID" sender:nil];
-    }
-    
+//    if ([PFUser currentUser]) {
+//        [self performSegueWithIdentifier:@"nav→MasterSegueID" sender:nil];
+//    } else {
+//        [self performSegueWithIdentifier:@"nav→LogInSegueID" sender:nil];
+//    }
+//    
 }
 
 - (void)didReceiveMemoryWarning {

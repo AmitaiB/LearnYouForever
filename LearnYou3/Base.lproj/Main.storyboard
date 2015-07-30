@@ -7,18 +7,17 @@
         <!--Master-->
         <scene sceneID="cUi-kZ-frf">
             <objects>
-                <navigationController title="Master" id="rS3-R9-Ivy" customClass="LYPNavigationController" sceneMemberID="viewController">
+                <navigationController title="Master" id="rS3-R9-Ivy" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="yXu-0R-QUA">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="pGg-6v-bdr" kind="show" identifier="nav→MasterSegueID" id="kcp-IQ-TXM"/>
-                        <segue destination="8qL-In-GrJ" kind="show" identifier="nav→LogInSegueID" id="8Tl-jK-kpi"/>
+                        <segue destination="8qL-In-GrJ" kind="relationship" relationship="rootViewController" id="tsM-nZ-NiG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-170" y="396"/>
+            <point key="canvasLocation" x="-115" y="786"/>
         </scene>
         <!--Master-->
         <scene sceneID="VgW-fR-Quf">
@@ -61,7 +60,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6Cn-md-YlS" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605" y="64"/>
+            <point key="canvasLocation" x="619" y="64"/>
         </scene>
         <!--Log In View Controller-->
         <scene sceneID="brs-5T-xx8">
@@ -76,10 +75,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="BhW-VD-nfa"/>
+                    <connections>
+                        <segue destination="pGg-6v-bdr" kind="show" identifier="logInToMasterSegueID" id="ECg-89-qJw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hO5-O8-cvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="605" y="752"/>
+            <point key="canvasLocation" x="-115" y="64"/>
         </scene>
         <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">

@@ -22,11 +22,14 @@
 
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    
+//    [PFUser logOut];
     PFLogInViewController *loginVC = [PFLogInViewController new];
     loginVC.delegate = self;
-    
-    [self presentViewController:loginVC animated:YES completion:nil];
+    if (![PFUser currentUser]) {
+        [self presentViewController:loginVC animated:YES completion:nil];
+    } else {
+        [self performSegueWithIdentifier:@"logInToMasterSegueID" sender:nil];
+    }
     
 
 }
