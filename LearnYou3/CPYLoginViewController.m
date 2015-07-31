@@ -10,6 +10,7 @@
 #import <AFNetworking.h>
 #import <AFOAuth2Manager/AFOAuth2Manager.h>
 #import <AFOAuth2Manager/AFHTTPRequestSerializer+OAuth2.h>
+#import "LY2Constants.h"
 
 @interface CPYLoginViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *githubButtonTapped;
@@ -63,7 +64,7 @@
     NSLog(@"Opened from URL %@", url);
     
     NSURL *baseURL = [NSURL URLWithString:@"https://github.com/"];
-    AFOAuth2Manager *OAuth2Manager = [AFOAuth2Manager alloc] initWithBaseURL:baseURL clientID:<#(NSString *)#> secret:<#(NSString *)#>
+    AFOAuth2Manager *OAuth2Manager = [AFOAuth2Manager alloc] initWithBaseURL:<#(NSURL *)#> clientID:<#(NSString *)#> secret:<#(NSString *)#>
 }
 
 - (void)didReceiveMemoryWarning {
