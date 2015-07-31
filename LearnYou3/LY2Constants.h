@@ -10,8 +10,8 @@
 
 @interface LY2Constants : NSObject
 
-extern NSString * const PARSE_API_ID;
-extern NSString * const PARSE_CLIENT_KEY;
+//extern NSString * const PARSE_API_ID;
+//extern NSString * const PARSE_CLIENT_KEY;
 extern NSString * const GITHUB_PAC_TOKEN;
 extern NSString * const REST_API_KEY;
 

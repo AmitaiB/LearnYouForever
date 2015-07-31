@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		38B9283C1B6AF6F20069872B /* CPYLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B9283B1B6AF6F20069872B /* CPYLoginViewController.m */; };
+		38B9283E1B6AFB590069872B /* VC.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B9283D1B6AFB590069872B /* VC.m */; };
 		38E97B291B6857370091BACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B271B6857370091BACA /* Main.storyboard */; };
 		38E97B2B1B6857370091BACA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B2A1B6857370091BACA /* Images.xcassets */; };
 		38E97B2E1B6857370091BACA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B2C1B6857370091BACA /* LaunchScreen.xib */; };
@@ -17,7 +19,6 @@
 		38E97B4C1B68582E0091BACA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E97B4B1B68582E0091BACA /* main.m */; };
 		38E97B4F1B68583D0091BACA /* LY2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E97B4E1B68583D0091BACA /* LY2Constants.m */; };
 		38E97B521B6858540091BACA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E97B511B6858540091BACA /* MasterViewController.m */; };
-		38E97B581B685B520091BACA /* LYPLogInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E97B571B685B520091BACA /* LYPLogInViewController.m */; };
 		F7B0E3A000D76494628C1623 /* libPods-LearnYou3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B34AD5379861FCF6117B38 /* libPods-LearnYou3.a */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,9 @@
 
 /* Begin PBXFileReference section */
 		18AF0C68C0E2E75E737E88F3 /* Pods-LearnYou3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnYou3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnYou3/Pods-LearnYou3.debug.xcconfig"; sourceTree = "<group>"; };
+		38B9283A1B6AF6F20069872B /* CPYLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPYLoginViewController.h; sourceTree = "<group>"; };
+		38B9283B1B6AF6F20069872B /* CPYLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPYLoginViewController.m; sourceTree = "<group>"; };
+		38B9283D1B6AFB590069872B /* VC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VC.m; sourceTree = "<group>"; };
 		38E97B171B6857370091BACA /* LearnYou3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnYou3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E97B281B6857370091BACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38E97B2A1B6857370091BACA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -50,8 +54,6 @@
 		38E97B4E1B68583D0091BACA /* LY2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY2Constants.m; sourceTree = "<group>"; };
 		38E97B501B6858540091BACA /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		38E97B511B6858540091BACA /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		38E97B561B685B520091BACA /* LYPLogInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYPLogInViewController.h; sourceTree = "<group>"; };
-		38E97B571B685B520091BACA /* LYPLogInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYPLogInViewController.m; sourceTree = "<group>"; };
 		50898F66E90BF7D64A377A8C /* Pods-LearnYou3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnYou3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnYou3/Pods-LearnYou3.release.xcconfig"; sourceTree = "<group>"; };
 		D5B34AD5379861FCF6117B38 /* libPods-LearnYou3.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-LearnYou3.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -104,9 +106,10 @@
 				38E97B511B6858540091BACA /* MasterViewController.m */,
 				38E97B461B6858050091BACA /* DetailViewController.h */,
 				38E97B471B6858050091BACA /* DetailViewController.m */,
+				38B9283A1B6AF6F20069872B /* CPYLoginViewController.h */,
+				38B9283B1B6AF6F20069872B /* CPYLoginViewController.m */,
+				38B9283D1B6AFB590069872B /* VC.m */,
 				38E97B271B6857370091BACA /* Main.storyboard */,
-				38E97B561B685B520091BACA /* LYPLogInViewController.h */,
-				38E97B571B685B520091BACA /* LYPLogInViewController.m */,
 				38E97B2A1B6857370091BACA /* Images.xcassets */,
 				38E97B2C1B6857370091BACA /* LaunchScreen.xib */,
 				38E97B1A1B6857370091BACA /* Supporting Files */,
@@ -205,6 +208,7 @@
 		38E97B0F1B6857370091BACA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CPY;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Amitai Blickstein, LLC";
 				TargetAttributes = {
@@ -296,11 +300,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E97B451B6857F30091BACA /* AppDelegate.m in Sources */,
-				38E97B581B685B520091BACA /* LYPLogInViewController.m in Sources */,
 				38E97B4F1B68583D0091BACA /* LY2Constants.m in Sources */,
 				38E97B521B6858540091BACA /* MasterViewController.m in Sources */,
+				38B9283C1B6AF6F20069872B /* CPYLoginViewController.m in Sources */,
 				38E97B4C1B68582E0091BACA /* main.m in Sources */,
 				38E97B481B6858050091BACA /* DetailViewController.m in Sources */,
+				38B9283E1B6AFB590069872B /* VC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Amitai Blickstein, LLC. All rights reserved.
 //
 
+//#import <Parse/Parse.h>
 #import "AppDelegate.h"
 #import "DetailViewController.h"
-#import <Parse/Parse.h>
 #import "LY2Constants.h"
 
 @interface AppDelegate ()
@@ -17,38 +17,28 @@
 
 @implementation AppDelegate
 
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-        // Enable storing and querying data from Local Datastore.
-    [Parse enableLocalDatastore];
-    
-        // ****************************************************************************
-        // Uncomment this line if you want to enable Crash Reporting
-//         [ParseCrashReporting enable];
-    
-        //!Parse credentials:
-         [Parse setApplicationId:PARSE_API_ID
-                       clientKey:PARSE_CLIENT_KEY];
-        
-        // If you are using Facebook, uncomment and add your FacebookAppID to your bundle's plist as
-        // described here: https://developers.facebook.com/docs/getting-started/facebook-sdk-for-ios/
-//         [PFFacebookUtils initializeFacebook];
-        // ****************************************************************************
-    
-//    [PFUser enableAutomaticUser];
-
-    PFACL *defaultACL = [PFACL ACL];
-    
-        // If you would like all objects to be private by default, remove this line.
-    [defaultACL setPublicReadAccess:YES];
-    
-    [PFACL setDefaultACL:defaultACL withAccessForCurrentUser:YES];
-    
-    
-    
-        // Override point for customization after application launch.
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
     return YES;
 }
+
+
+-(BOOL)application:(UIApplication *)application
+           openURL:(NSURL *)url
+ sourceApplication:(NSString *)sourceApplication
+        annotation:(id)annotation {
+    
+        // broadcast the fact that we were opened to handle a URL
+    
+    NSLog(@"In the app delegate, opened for url %@", url);
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"ApplicationOpenedForURL"
+                                                        object:nil
+                                                      userInfo:@{ @"url": url }];
+    
+    return YES;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

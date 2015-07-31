@@ -6,10 +6,10 @@
 //  Copyright (c) 2015 Amitai Blickstein, LLC. All rights reserved.
 //
 
+//#import <Parse.h>
+//#import <ParseUI.h>
 #import "MasterViewController.h"
 #import "DetailViewController.h"
-#import <Parse.h>
-#import <ParseUI.h>
 
 @interface MasterViewController () 
 
@@ -32,25 +32,25 @@
     self.navigationItem.rightBarButtonItem = addButton;
 }
 
--(BOOL)logInViewController:(PFLogInViewController * __nonnull)logInController shouldBeginLogInWithUsername:(NSString * __nonnull)username password:(NSString * __nonnull)password {
-        //check if both fields are compelted.
-    if (username && password && username.length !=0 && password.length != 0) {
-        return YES; //
-    }
-    
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Missing Information"
-                                                                   message:@"Make sure you fill out all of the information, and have your credit card handy!"
-                                                            preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK, I have reflected on my actions - let me try again!"
-                                                            style:UIAlertActionStyleDefault
-                                                          handler:nil];
-    
-    [alert addAction:defaultAction];
-    [self presentViewController:alert
-                       animated:YES
-                     completion:nil];
-    return NO;
-}
+//-(BOOL)logInViewController:(PFLogInViewController * __nonnull)logInController shouldBeginLogInWithUsername:(NSString * __nonnull)username password:(NSString * __nonnull)password {
+//        //check if both fields are compelted.
+//    if (username && password && username.length !=0 && password.length != 0) {
+//        return YES; //
+//    }
+//    
+//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Missing Information"
+//                                                                   message:@"Make sure you fill out all of the information, and have your credit card handy!"
+//                                                            preferredStyle:UIAlertControllerStyleAlert];
+//    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK, I have reflected on my actions - let me try again!"
+//                                                            style:UIAlertActionStyleDefault
+//                                                          handler:nil];
+//    
+//    [alert addAction:defaultAction];
+//    [self presentViewController:alert
+//                       animated:YES
+//                     completion:nil];
+//    return NO;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

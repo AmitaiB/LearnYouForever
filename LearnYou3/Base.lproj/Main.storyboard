@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Master-->
@@ -17,7 +18,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eq9-QA-ai8" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115" y="786"/>
+            <point key="canvasLocation" x="-853.5" y="58"/>
         </scene>
         <!--Master-->
         <scene sceneID="VgW-fR-Quf">
@@ -62,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="619" y="64"/>
         </scene>
-        <!--Log In View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="brs-5T-xx8">
             <objects>
-                <viewController id="8qL-In-GrJ" customClass="LYPLogInViewController" sceneMemberID="viewController">
+                <viewController id="8qL-In-GrJ" customClass="CPYLoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WRS-60-CEY"/>
                         <viewControllerLayoutGuide type="bottom" id="9RX-Ry-bQl"/>
@@ -73,16 +74,109 @@
                     <view key="view" contentMode="scaleToFill" id="vRB-nj-3dK">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octocat" translatesAutoresizingMaskIntoConstraints="NO" id="g7k-C7-rR3">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7My-Th-45k">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Hl5-Sz-HmI"/>
+                                    <constraint firstAttribute="width" constant="89" id="nvY-fs-RzM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="18"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Hl5-Sz-HmI"/>
+                                        <exclude reference="nvY-fs-RzM"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Hl5-Sz-HmI"/>
+                                        <include reference="nvY-fs-RzM"/>
+                                    </mask>
+                                </variation>
+                            </label>
+                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyr-Sc-Qgh">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="76" id="sY6-SU-gzt"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="github-logo">
+                                    <color key="titleShadowColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="sY6-SU-gzt"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="sY6-SU-gzt"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="g7k-C7-rR3" secondAttribute="trailing" id="5zx-Y5-al7"/>
+                            <constraint firstItem="7My-Th-45k" firstAttribute="top" secondItem="g7k-C7-rR3" secondAttribute="bottom" constant="8" symbolic="YES" id="AVu-vC-inR"/>
+                            <constraint firstItem="9RX-Ry-bQl" firstAttribute="top" secondItem="kyr-Sc-Qgh" secondAttribute="bottom" constant="107" id="BWs-WS-v6o"/>
+                            <constraint firstItem="kyr-Sc-Qgh" firstAttribute="top" secondItem="7My-Th-45k" secondAttribute="bottom" constant="8" symbolic="YES" id="Ms4-ld-NH3"/>
+                            <constraint firstItem="g7k-C7-rR3" firstAttribute="leading" secondItem="vRB-nj-3dK" secondAttribute="leadingMargin" constant="-21" id="Vzw-QH-cFi"/>
+                            <constraint firstItem="kyr-Sc-Qgh" firstAttribute="leading" secondItem="vRB-nj-3dK" secondAttribute="leadingMargin" constant="12" id="coa-1Y-ieM"/>
+                            <constraint firstItem="g7k-C7-rR3" firstAttribute="top" secondItem="WRS-60-CEY" secondAttribute="bottom" constant="97" id="fgN-uY-Tzu"/>
+                            <constraint firstItem="7My-Th-45k" firstAttribute="centerX" secondItem="kyr-Sc-Qgh" secondAttribute="centerX" id="h3m-im-YJC"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kyr-Sc-Qgh" secondAttribute="trailing" constant="10" id="uBv-gj-hpt"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="g7k-C7-rR3"/>
+                                <exclude reference="7My-Th-45k"/>
+                                <exclude reference="kyr-Sc-Qgh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="5zx-Y5-al7"/>
+                                <exclude reference="Vzw-QH-cFi"/>
+                                <exclude reference="fgN-uY-Tzu"/>
+                                <exclude reference="Ms4-ld-NH3"/>
+                                <exclude reference="coa-1Y-ieM"/>
+                                <exclude reference="uBv-gj-hpt"/>
+                                <exclude reference="AVu-vC-inR"/>
+                                <exclude reference="h3m-im-YJC"/>
+                                <exclude reference="BWs-WS-v6o"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="g7k-C7-rR3"/>
+                                <include reference="7My-Th-45k"/>
+                                <include reference="kyr-Sc-Qgh"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="5zx-Y5-al7"/>
+                                <include reference="Vzw-QH-cFi"/>
+                                <include reference="fgN-uY-Tzu"/>
+                                <include reference="Ms4-ld-NH3"/>
+                                <include reference="coa-1Y-ieM"/>
+                                <include reference="uBv-gj-hpt"/>
+                                <include reference="AVu-vC-inR"/>
+                                <include reference="h3m-im-YJC"/>
+                                <include reference="BWs-WS-v6o"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="BhW-VD-nfa"/>
                     <connections>
+                        <outlet property="githubButtonTapped" destination="kyr-Sc-Qgh" id="W2E-el-45v"/>
                         <segue destination="pGg-6v-bdr" kind="show" identifier="logInToMasterSegueID" id="ECg-89-qJw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hO5-O8-cvz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-115" y="64"/>
+            <point key="canvasLocation" x="-115.5" y="64"/>
         </scene>
         <!--Detail-->
         <scene sceneID="Cn3-H9-jdl">
@@ -121,4 +215,8 @@
             <point key="canvasLocation" x="1343" y="64"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="github-logo" width="400" height="104"/>
+        <image name="octocat" width="400" height="332"/>
+    </resources>
 </document>
