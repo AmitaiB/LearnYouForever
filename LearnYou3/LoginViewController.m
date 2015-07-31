@@ -29,6 +29,10 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    if ([AFOAuthCredential retrieveCredentialWithIdentifier:@"githubOAuthToken"]) {
+        [self performSegueWithIdentifier:@"logInToMasterSegueID" sender:nil];
+    }
+    
         //Notify this instance of the view controller and call method.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(handleApplicationOpenedForURL:) name:@"ApplicationOpenedForURL" object:nil];
 }
@@ -64,18 +68,27 @@
     NSString *code = [self firstValueForQueryItemNamed:@"code" inURL:url];
     NSLog(@"Opened from URL %@", url);
     
-    NSURL *baseURL = [NSURL URLWithString:@"https://github.com/"];
-    AFOAuth2Manager *OAuth2Manager = [[AFOAuth2Manager alloc] initWithBaseURL:baseURL clientID:GITHUB_CLIENT_ID secret:GITHIB_CLIENT_SECRET];
+//    NSURL *baseURL = [NSURL URLWithString:@"https://github.com/"];
+//    AFOAuth2Manager *OAuth2Manager = [[AFOAuth2Manager alloc] initWithBaseURL:baseURL clientID:GITHUB_CLIENT_ID secret:GITHIB_CLIENT_SECRET];
 }
 
+-(AFOAuth2Manager *)githubOAuth2ManagerCreate {
+    NSURL *baseURL = [NSURL URLWithString:@"https://github.com/"];
+    AFOAuth2Manager *OAuth2Manager = [[AFOAuth2Manager alloc] initWithBaseURL:baseURL
+                                                                     clientID:GITHUB_CLIENT_ID
+                                                                       secret:GITHIB_CLIENT_SECRET];
+    return OAuth2Manager;
+}
 
+    ///AFOAuth2Manager stores passwords etc. in the Keychain.
 - (IBAction)githubButtonWasTapped:(id)sender {
-    GitHubOAuthController *oAuthController = [[GitHubOAuthController alloc] initWithClientId:GITHUB_CLIENT_ID
-                                                                                clientSecret:GITHIB_CLIENT_SECRET
-                                                                                       scope:@"repo"
-                                                                                     success:^(NSString *accessToken, NSDictionary *raw) {
-                                                                                         NSLog(@"access token: %@ \nraw: %@", accessToken, raw);
-                                                                                     } failure:nil];
+    AFOAuth2Manager *oAuthManager = [self githubOAuth2ManagerCreate];
+    
+    GitHubOAuthController *oAuthController = [[GitHubOAuthController alloc] initWithClientId:GITHUB_CLIENT_ID clientSecret:GITHIB_CLIENT_SECRET scope:@"repo" success:^(NSString *accessToken, NSDictionary *raw) {
+        NSLog(@"access token: %@ \nraw: %@", accessToken, raw);
+        AFOAuthCredential *credential = [AFOAuthCredential credentialWithOAuthToken:raw[@"access_token"]  tokenType:raw[@"token_type"]];
+        [AFOAuthCredential storeCredential:credential withIdentifier:@"githubOAuthToken"];
+    } failure:nil];
     
     [oAuthController showModalFromController:self];
 }
