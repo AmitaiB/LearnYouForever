@@ -10,6 +10,7 @@
 		38B9283C1B6AF6F20069872B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B9283B1B6AF6F20069872B /* LoginViewController.m */; };
 		38B928421B6B052B0069872B /* Notes to Selves.md in Resources */ = {isa = PBXBuildFile; fileRef = 38B928411B6B052B0069872B /* Notes to Selves.md */; };
 		38B928441B6B086B0069872B /* LY2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B928431B6B086B0069872B /* LY2Constants.m */; };
+		38B928461B6BB17C0069872B /* Notes to LoginViewController in Resources */ = {isa = PBXBuildFile; fileRef = 38B928451B6BB17C0069872B /* Notes to LoginViewController */; };
 		38E97B291B6857370091BACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B271B6857370091BACA /* Main.storyboard */; };
 		38E97B2B1B6857370091BACA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B2A1B6857370091BACA /* Images.xcassets */; };
 		38E97B2E1B6857370091BACA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B2C1B6857370091BACA /* LaunchScreen.xib */; };
@@ -38,6 +39,7 @@
 		38B9283B1B6AF6F20069872B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		38B928411B6B052B0069872B /* Notes to Selves.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Notes to Selves.md"; sourceTree = "<group>"; };
 		38B928431B6B086B0069872B /* LY2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY2Constants.m; sourceTree = "<group>"; };
+		38B928451B6BB17C0069872B /* Notes to LoginViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Notes to LoginViewController"; sourceTree = "<group>"; };
 		38E97B171B6857370091BACA /* LearnYou3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnYou3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E97B281B6857370091BACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38E97B2A1B6857370091BACA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				38E97B471B6858050091BACA /* DetailViewController.m */,
 				38B9283A1B6AF6F20069872B /* LoginViewController.h */,
 				38B9283B1B6AF6F20069872B /* LoginViewController.m */,
+				38B928451B6BB17C0069872B /* Notes to LoginViewController */,
 				38E97B271B6857370091BACA /* Main.storyboard */,
 				38E97B2A1B6857370091BACA /* Images.xcassets */,
 				38E97B2C1B6857370091BACA /* LaunchScreen.xib */,
@@ -249,6 +252,7 @@
 				38B928421B6B052B0069872B /* Notes to Selves.md in Resources */,
 				38E97B291B6857370091BACA /* Main.storyboard in Resources */,
 				38E97B2E1B6857370091BACA /* LaunchScreen.xib in Resources */,
+				38B928461B6BB17C0069872B /* Notes to LoginViewController in Resources */,
 				38E97B2B1B6857370091BACA /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

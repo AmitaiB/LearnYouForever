@@ -1,0 +1,10 @@
+//    NSURL *baseURL = [NSURL URLWithString:@"https://github.com/"];
+//    AFOAuth2Manager *OAuth2Manager = [[AFOAuth2Manager alloc] initWithBaseURL:baseURL clientID:GITHUB_CLIENT_ID secret:GITHIB_CLIENT_SECRET];
+
+//-(AFOAuth2Manager *)githubOAuth2ManagerCreate {
+//    NSURL *baseURL = [NSURL URLWithString:@"https://github.com/"];
+//    AFOAuth2Manager *OAuth2Manager = [[AFOAuth2Manager alloc] initWithBaseURL:baseURL
+//                                                                     clientID:GITHUB_CLIENT_ID
+//                                                                       secret:GITHIB_CLIENT_SECRET];
+//    return OAuth2Manager;
+//}
