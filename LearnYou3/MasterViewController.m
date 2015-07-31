@@ -50,17 +50,18 @@
 - (void)logout:(id)sender {
     NSLog (@"Logout");
     
-    [self.navigationController popViewControllerAnimated:YES];
     [self githubLogout];
-
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
--(AFOAuth2Manager *)githubLogout {
-    NSURL *baseURL = [NSURL URLWithString:@""];
-    AFOAuth2Manager *OAuth2Manager = [[AFOAuth2Manager alloc] initWithBaseURL:baseURL
-                                                                     clientID:@""
-                                                                       secret:@""];
-    return OAuth2Manager;
+-(void)githubLogout {
+//    NSURL *baseURL = [NSURL URLWithString:@""];
+//    AFOAuth2Manager *OAuth2Manager = [[AFOAuth2Manager alloc] initWithBaseURL:baseURL
+//                                                                     clientID:@""
+//                                                                       secret:@""];
+//    return OAuth2Manager;
+    
+    [AFOAuthCredential deleteCredentialWithIdentifier:@"githubOAuthToken"];
 }
 
 #pragma mark - Segues

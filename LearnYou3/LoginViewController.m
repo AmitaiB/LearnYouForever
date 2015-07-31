@@ -40,7 +40,9 @@
         
         NSLog(@"In if statement of retrireveCredential");
         
-        [self performSegueWithIdentifier:@"logInToMasterSegueID" sender:nil];
+//        if (<#condition#>) {
+            [self performSegueWithIdentifier:@"logInToMasterSegueID" sender:nil];
+//        }
     }
     
         //Notify this instance of the view controller and call method.
