@@ -47,6 +47,25 @@
     return nil;
 }
 
+
+-(void)handleApplicationOpenedForURL:(NSNotification *)notification
+{
+        //Naming: without handle, the name feels more like a URL
+    
+    
+    NSLog(@"Does this get called?????!");
+    
+    NSURL *url = notification.userInfo[@"url"];
+    
+//    [[NSNotificationCenter defaultCenter] postNotificationName:@"ApplicationOpenedForURL" object:nil userInfo:@{@"url":url}];
+    
+    NSString *code = [self firstValueForQueryItemNamed:@"code" inURL:url];
+    NSLog(@"Opened from URL %@", url);
+    
+    NSURL *baseURL = [NSURL URLWithString:@"https://github.com/"];
+    AFOAuth2Manager *OAuth2Manager = [AFOAuth2Manager alloc] initWithBaseURL:baseURL clientID:<#(NSString *)#> secret:<#(NSString *)#>
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

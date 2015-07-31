@@ -13,6 +13,7 @@
 //NSString * const PARSE_API_ID     = @"vVjAz9f5UdJk6t5fkuicQWcBzZ78ZvdBqTYwQaqY";
 //NSString * const PARSE_CLIENT_KEY = @"FfNbHGxMW6U4cVlHxcsTtu1ZRGhj18Ecfnifkzv1";
 NSString * const GITHUB_PAC_TOKEN = @"420b63c5b52c510efbae3b368fc0a5a16b4d6813";
+NSString * const GITHUB_CLIENT_ID = @"46fe54bf4273ae57ce98";
 NSString * const REST_API_KEY     = @"FYiTCcC4IHKtDDqmZFnxATuJumcTQzQCPbH5BhWw";
 
 @end
