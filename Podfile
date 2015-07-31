@@ -6,6 +6,7 @@ pod 'Parse'
 pod 'ParseUI'
 pod 'AFNetworking'
 pod 'AFOAuth2Manager'
+pod 'GitHubOAuthController'
 end
 
 target 'LearnYou3Tests' do

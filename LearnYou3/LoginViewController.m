@@ -6,18 +6,19 @@
 //  Copyright (c) 2015 Amitai Blickstein, LLC. All rights reserved.
 //
 
-#import "CPYLoginViewController.h"
+#import "LoginViewController.h"
 #import <AFNetworking.h>
 #import <AFOAuth2Manager/AFOAuth2Manager.h>
 #import <AFOAuth2Manager/AFHTTPRequestSerializer+OAuth2.h>
 #import "LY2Constants.h"
+#import <GitHubOAuthController.h>
 
-@interface CPYLoginViewController ()
-@property (weak, nonatomic) IBOutlet UIButton *githubButtonTapped;
+@interface LoginViewController ()
+- (IBAction)githubButtonWasTapped:(id)sender;
 
 @end
 
-@implementation CPYLoginViewController
+@implementation LoginViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -64,7 +65,19 @@
     NSLog(@"Opened from URL %@", url);
     
     NSURL *baseURL = [NSURL URLWithString:@"https://github.com/"];
-    AFOAuth2Manager *OAuth2Manager = [AFOAuth2Manager alloc] initWithBaseURL:<#(NSURL *)#> clientID:<#(NSString *)#> secret:<#(NSString *)#>
+    AFOAuth2Manager *OAuth2Manager = [[AFOAuth2Manager alloc] initWithBaseURL:baseURL clientID:GITHUB_CLIENT_ID secret:GITHIB_CLIENT_SECRET];
+}
+
+
+- (IBAction)githubButtonWasTapped:(id)sender {
+    GitHubOAuthController *oAuthController = [[GitHubOAuthController alloc] initWithClientId:GITHUB_CLIENT_ID
+                                                                                clientSecret:GITHIB_CLIENT_SECRET
+                                                                                       scope:@"repo"
+                                                                                     success:^(NSString *accessToken, NSDictionary *raw) {
+                                                                                         NSLog(@"access token: %@ \nraw: %@", accessToken, raw);
+                                                                                     } failure:nil];
+    
+    [oAuthController showModalFromController:self];
 }
 
 - (void)didReceiveMemoryWarning {

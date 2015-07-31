@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rS3-R9-Ivy">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -66,7 +67,7 @@
         <!--Login View Controller-->
         <scene sceneID="brs-5T-xx8">
             <objects>
-                <viewController id="8qL-In-GrJ" customClass="CPYLoginViewController" sceneMemberID="viewController">
+                <viewController id="8qL-In-GrJ" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="WRS-60-CEY"/>
                         <viewControllerLayoutGuide type="bottom" id="9RX-Ry-bQl"/>
@@ -75,9 +76,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octocat" translatesAutoresizingMaskIntoConstraints="NO" id="g7k-C7-rR3">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in with" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7My-Th-45k">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <constraints>
@@ -112,12 +110,19 @@
                                         <exclude reference="sY6-SU-gzt"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact">
+                                <variation key="widthClass=compact" misplaced="YES">
+                                    <rect key="frame" x="28" y="416" width="346" height="76"/>
                                     <mask key="constraints">
                                         <include reference="sY6-SU-gzt"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="githubButtonWasTapped:" destination="8qL-In-GrJ" eventType="touchUpInside" id="53J-qQ-PLl"/>
+                                </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="octocat" translatesAutoresizingMaskIntoConstraints="NO" id="g7k-C7-rR3">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -133,44 +138,43 @@
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="g7k-C7-rR3"/>
                                 <exclude reference="7My-Th-45k"/>
                                 <exclude reference="kyr-Sc-Qgh"/>
+                                <exclude reference="g7k-C7-rR3"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="5zx-Y5-al7"/>
-                                <exclude reference="Vzw-QH-cFi"/>
-                                <exclude reference="fgN-uY-Tzu"/>
-                                <exclude reference="Ms4-ld-NH3"/>
-                                <exclude reference="coa-1Y-ieM"/>
-                                <exclude reference="uBv-gj-hpt"/>
                                 <exclude reference="AVu-vC-inR"/>
                                 <exclude reference="h3m-im-YJC"/>
                                 <exclude reference="BWs-WS-v6o"/>
+                                <exclude reference="Ms4-ld-NH3"/>
+                                <exclude reference="coa-1Y-ieM"/>
+                                <exclude reference="uBv-gj-hpt"/>
+                                <exclude reference="5zx-Y5-al7"/>
+                                <exclude reference="Vzw-QH-cFi"/>
+                                <exclude reference="fgN-uY-Tzu"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="g7k-C7-rR3"/>
                                 <include reference="7My-Th-45k"/>
                                 <include reference="kyr-Sc-Qgh"/>
+                                <include reference="g7k-C7-rR3"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="5zx-Y5-al7"/>
-                                <include reference="Vzw-QH-cFi"/>
-                                <include reference="fgN-uY-Tzu"/>
-                                <include reference="Ms4-ld-NH3"/>
-                                <include reference="coa-1Y-ieM"/>
-                                <include reference="uBv-gj-hpt"/>
                                 <include reference="AVu-vC-inR"/>
                                 <include reference="h3m-im-YJC"/>
                                 <include reference="BWs-WS-v6o"/>
+                                <include reference="Ms4-ld-NH3"/>
+                                <include reference="coa-1Y-ieM"/>
+                                <include reference="uBv-gj-hpt"/>
+                                <include reference="5zx-Y5-al7"/>
+                                <include reference="Vzw-QH-cFi"/>
+                                <include reference="fgN-uY-Tzu"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="BhW-VD-nfa"/>
                     <connections>
-                        <outlet property="githubButtonTapped" destination="kyr-Sc-Qgh" id="W2E-el-45v"/>
                         <segue destination="pGg-6v-bdr" kind="show" identifier="logInToMasterSegueID" id="ECg-89-qJw"/>
                     </connections>
                 </viewController>

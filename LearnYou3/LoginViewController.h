@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CPYLoginViewController : UIViewController
+@interface LoginViewController : UIViewController
 
 @end

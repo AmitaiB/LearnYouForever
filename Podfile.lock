@@ -23,6 +23,7 @@ PODS:
   - AFOAuth2Manager (2.2.0):
     - AFNetworking/NSURLConnection (~> 2.2)
   - Bolts/Tasks (1.2.0)
+  - GitHubOAuthController (0.1)
   - Parse (1.7.5.3):
     - Bolts/Tasks (>= 1.2.0)
   - ParseUI (1.1.4):
@@ -31,6 +32,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking
   - AFOAuth2Manager
+  - GitHubOAuthController
   - Parse
   - ParseUI
 
@@ -38,6 +40,7 @@ SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   AFOAuth2Manager: 952eb62e8fd8022971e64c6e8fe28b9e999224af
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
+  GitHubOAuthController: 6d147f984e1ce5863b522ee3fb7a453468102974
   Parse: 373adbb1ad2e34d383542c3b28f678c49ebe4881
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
 

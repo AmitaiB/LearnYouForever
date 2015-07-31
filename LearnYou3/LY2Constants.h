@@ -13,8 +13,8 @@
 //extern NSString * const PARSE_API_ID;
 //extern NSString * const PARSE_CLIENT_KEY;
 extern NSString * const GITHUB_PAC_TOKEN;
-extern NSString * const GITHUB_CLIENT_ID;
 extern NSString * const GITHIB_CLIENT_SECRET;
+extern NSString * const GITHUB_CLIENT_ID;
 extern NSString * const REST_API_KEY;
 
 @end
