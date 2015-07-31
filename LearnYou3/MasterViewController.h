@@ -7,10 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-//#import <Parse.h>
-//#import <ParseUI.h>
 
-@interface MasterViewController : UITableViewController //<PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate>
+@interface MasterViewController : UITableViewController
 
 
 @end

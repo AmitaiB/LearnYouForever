@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07C3B71E1B6BA0D50093B2D5 /* LY3Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C3B71D1B6BA0D50093B2D5 /* LY3Constants.m */; };
 		38B9283C1B6AF6F20069872B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B9283B1B6AF6F20069872B /* LoginViewController.m */; };
 		38B928421B6B052B0069872B /* Notes to Selves.md in Resources */ = {isa = PBXBuildFile; fileRef = 38B928411B6B052B0069872B /* Notes to Selves.md */; };
-		38B928441B6B086B0069872B /* LY2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B928431B6B086B0069872B /* LY2Constants.m */; };
 		38E97B291B6857370091BACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B271B6857370091BACA /* Main.storyboard */; };
 		38E97B2B1B6857370091BACA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B2A1B6857370091BACA /* Images.xcassets */; };
 		38E97B2E1B6857370091BACA /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B2C1B6857370091BACA /* LaunchScreen.xib */; };
@@ -33,11 +33,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07C3B71C1B6BA0D50093B2D5 /* LY3Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY3Constants.h; sourceTree = "<group>"; };
+		07C3B71D1B6BA0D50093B2D5 /* LY3Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY3Constants.m; sourceTree = "<group>"; };
 		18AF0C68C0E2E75E737E88F3 /* Pods-LearnYou3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnYou3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnYou3/Pods-LearnYou3.debug.xcconfig"; sourceTree = "<group>"; };
 		38B9283A1B6AF6F20069872B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		38B9283B1B6AF6F20069872B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		38B928411B6B052B0069872B /* Notes to Selves.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Notes to Selves.md"; sourceTree = "<group>"; };
-		38B928431B6B086B0069872B /* LY2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY2Constants.m; sourceTree = "<group>"; };
 		38E97B171B6857370091BACA /* LearnYou3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnYou3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E97B281B6857370091BACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38E97B2A1B6857370091BACA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -51,7 +52,6 @@
 		38E97B471B6858050091BACA /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		38E97B491B6858250091BACA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38E97B4B1B68582E0091BACA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		38E97B4D1B68583D0091BACA /* LY2Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY2Constants.h; sourceTree = "<group>"; };
 		38E97B501B6858540091BACA /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		38E97B511B6858540091BACA /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		50898F66E90BF7D64A377A8C /* Pods-LearnYou3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnYou3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnYou3/Pods-LearnYou3.release.xcconfig"; sourceTree = "<group>"; };
@@ -120,8 +120,8 @@
 		38E97B1A1B6857370091BACA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				38E97B4D1B68583D0091BACA /* LY2Constants.h */,
-				38B928431B6B086B0069872B /* LY2Constants.m */,
+				07C3B71C1B6BA0D50093B2D5 /* LY3Constants.h */,
+				07C3B71D1B6BA0D50093B2D5 /* LY3Constants.m */,
 				38E97B491B6858250091BACA /* Info.plist */,
 				38E97B4B1B68582E0091BACA /* main.m */,
 			);
@@ -303,9 +303,9 @@
 				38E97B451B6857F30091BACA /* AppDelegate.m in Sources */,
 				38E97B521B6858540091BACA /* MasterViewController.m in Sources */,
 				38B9283C1B6AF6F20069872B /* LoginViewController.m in Sources */,
+				07C3B71E1B6BA0D50093B2D5 /* LY3Constants.m in Sources */,
 				38E97B4C1B68582E0091BACA /* main.m in Sources */,
 				38E97B481B6858050091BACA /* DetailViewController.m in Sources */,
-				38B928441B6B086B0069872B /* LY2Constants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
