@@ -17,7 +17,6 @@
 		38E97B481B6858050091BACA /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E97B471B6858050091BACA /* DetailViewController.m */; };
 		38E97B4A1B6858250091BACA /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B491B6858250091BACA /* Info.plist */; };
 		38E97B4C1B68582E0091BACA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E97B4B1B68582E0091BACA /* main.m */; };
-		38E97B4F1B68583D0091BACA /* LY2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E97B4E1B68583D0091BACA /* LY2Constants.m */; };
 		38E97B521B6858540091BACA /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E97B511B6858540091BACA /* MasterViewController.m */; };
 		F7B0E3A000D76494628C1623 /* libPods-LearnYou3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5B34AD5379861FCF6117B38 /* libPods-LearnYou3.a */; };
 /* End PBXBuildFile section */
@@ -51,7 +50,6 @@
 		38E97B491B6858250091BACA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38E97B4B1B68582E0091BACA /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		38E97B4D1B68583D0091BACA /* LY2Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY2Constants.h; sourceTree = "<group>"; };
-		38E97B4E1B68583D0091BACA /* LY2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY2Constants.m; sourceTree = "<group>"; };
 		38E97B501B6858540091BACA /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		38E97B511B6858540091BACA /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		50898F66E90BF7D64A377A8C /* Pods-LearnYou3.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnYou3.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearnYou3/Pods-LearnYou3.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				38E97B4D1B68583D0091BACA /* LY2Constants.h */,
-				38E97B4E1B68583D0091BACA /* LY2Constants.m */,
 				38E97B491B6858250091BACA /* Info.plist */,
 				38E97B4B1B68582E0091BACA /* main.m */,
 			);
@@ -300,7 +297,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E97B451B6857F30091BACA /* AppDelegate.m in Sources */,
-				38E97B4F1B68583D0091BACA /* LY2Constants.m in Sources */,
 				38E97B521B6858540091BACA /* MasterViewController.m in Sources */,
 				38B9283C1B6AF6F20069872B /* CPYLoginViewController.m in Sources */,
 				38E97B4C1B68582E0091BACA /* main.m in Sources */,
