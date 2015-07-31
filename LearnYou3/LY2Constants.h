@@ -18,3 +18,8 @@ extern NSString * const GITHIB_CLIENT_SECRET;
 extern NSString * const REST_API_KEY;
 
 @end
+
+/**
+ *  Scopes limit access for personal tokens. Read more about OAuth scopes.
+repo   repo:status   repo_deployment  public_repo   delete_repo   user  user:email   user:follow   admin:org  write:org   read:org   admin:public_key  write:public_key   read:public_key   admin:repo_hook  write:repo_hook   read:repo_hook   admin:org_hook  gist notifications
+ */
