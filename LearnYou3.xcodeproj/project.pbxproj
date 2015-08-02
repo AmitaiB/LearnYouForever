@@ -37,7 +37,7 @@
 
 /* Begin PBXFileReference section */
 		18AF0C68C0E2E75E737E88F3 /* Pods-LearnYou3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnYou3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnYou3/Pods-LearnYou3.debug.xcconfig"; sourceTree = "<group>"; };
-		38A79B1A1B6E751D00C0C0A5 /* LY2Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY2Constants.h; sourceTree = "<group>"; };
+		386B8E741B6EC10200B53693 /* LY2Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LY2Constants.h; sourceTree = "<group>"; };
 		38A79B1B1B6E752800C0C0A5 /* LY2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY2Constants.m; sourceTree = "<group>"; };
 		38A79B1D1B6E780400C0C0A5 /* LY3GithubAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY3GithubAPIClient.h; sourceTree = "<group>"; };
 		38A79B1E1B6E780400C0C0A5 /* LY3GithubAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY3GithubAPIClient.m; sourceTree = "<group>"; };
@@ -134,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				38E97B491B6858250091BACA /* Info.plist */,
-				38A79B1A1B6E751D00C0C0A5 /* LY2Constants.h */,
+				386B8E741B6EC10200B53693 /* LY2Constants.h */,
 				38A79B1B1B6E752800C0C0A5 /* LY2Constants.m */,
 				38E97B4B1B68582E0091BACA /* main.m */,
 			);
