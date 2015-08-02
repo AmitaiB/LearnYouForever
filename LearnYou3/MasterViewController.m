@@ -31,8 +31,10 @@
     self.navigationItem.rightBarButtonItem = addButton;
     
     
-    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(logout:)];
-    self.navigationItem.leftBarButtonItem = logoutButton;
+//    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(logout:)];
+//    self.navigationItem.leftBarButtonItem = logoutButton;
+    
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonItemStylePlain target:self action:@selector(logout:)];
     
 }
 
