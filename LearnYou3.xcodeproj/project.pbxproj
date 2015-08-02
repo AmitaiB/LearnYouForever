@@ -7,10 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07C3B71E1B6BA0D50093B2D5 /* LY3Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 07C3B71D1B6BA0D50093B2D5 /* LY3Constants.m */; };
+		38A79B1C1B6E752800C0C0A5 /* LY2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A79B1B1B6E752800C0C0A5 /* LY2Constants.m */; };
 		38B9283C1B6AF6F20069872B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B9283B1B6AF6F20069872B /* LoginViewController.m */; };
 		38B928421B6B052B0069872B /* Notes to Selves.md in Resources */ = {isa = PBXBuildFile; fileRef = 38B928411B6B052B0069872B /* Notes to Selves.md */; };
-		38B928441B6B086B0069872B /* LY2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B928431B6B086B0069872B /* LY2Constants.m */; };
 		38B928461B6BB17C0069872B /* Notes to LoginViewController in Resources */ = {isa = PBXBuildFile; fileRef = 38B928451B6BB17C0069872B /* Notes to LoginViewController */; };
 		38E97B291B6857370091BACA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B271B6857370091BACA /* Main.storyboard */; };
 		38E97B2B1B6857370091BACA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 38E97B2A1B6857370091BACA /* Images.xcassets */; };
@@ -35,15 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07C3B71C1B6BA0D50093B2D5 /* LY3Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY3Constants.h; sourceTree = "<group>"; };
-		07C3B71D1B6BA0D50093B2D5 /* LY3Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY3Constants.m; sourceTree = "<group>"; };
 		18AF0C68C0E2E75E737E88F3 /* Pods-LearnYou3.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearnYou3.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearnYou3/Pods-LearnYou3.debug.xcconfig"; sourceTree = "<group>"; };
+		38A79B1A1B6E751D00C0C0A5 /* LY2Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY2Constants.h; sourceTree = "<group>"; };
+		38A79B1B1B6E752800C0C0A5 /* LY2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY2Constants.m; sourceTree = "<group>"; };
 		38B9283A1B6AF6F20069872B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		38B9283B1B6AF6F20069872B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		38B928411B6B052B0069872B /* Notes to Selves.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Notes to Selves.md"; sourceTree = "<group>"; };
-		38B928431B6B086B0069872B /* LY2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY2Constants.m; sourceTree = "<group>"; };
 		38B928451B6BB17C0069872B /* Notes to LoginViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Notes to LoginViewController"; sourceTree = "<group>"; };
-
 		38E97B171B6857370091BACA /* LearnYou3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnYou3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E97B281B6857370091BACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38E97B2A1B6857370091BACA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -126,9 +123,9 @@
 		38E97B1A1B6857370091BACA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				07C3B71C1B6BA0D50093B2D5 /* LY3Constants.h */,
-				07C3B71D1B6BA0D50093B2D5 /* LY3Constants.m */,
 				38E97B491B6858250091BACA /* Info.plist */,
+				38A79B1A1B6E751D00C0C0A5 /* LY2Constants.h */,
+				38A79B1B1B6E752800C0C0A5 /* LY2Constants.m */,
 				38E97B4B1B68582E0091BACA /* main.m */,
 			);
 			name = "Supporting Files";
@@ -308,9 +305,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E97B451B6857F30091BACA /* AppDelegate.m in Sources */,
+				38A79B1C1B6E752800C0C0A5 /* LY2Constants.m in Sources */,
 				38E97B521B6858540091BACA /* MasterViewController.m in Sources */,
 				38B9283C1B6AF6F20069872B /* LoginViewController.m in Sources */,
-				07C3B71E1B6BA0D50093B2D5 /* LY3Constants.m in Sources */,
 				38E97B4C1B68582E0091BACA /* main.m in Sources */,
 				38E97B481B6858050091BACA /* DetailViewController.m in Sources */,
 			);
