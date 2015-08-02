@@ -6,10 +6,9 @@
 //  Copyright (c) 2015 Amitai Blickstein, LLC. All rights reserved.
 //
 
-//#import <Parse.h>
-//#import <ParseUI.h>
 #import "MasterViewController.h"
 #import "DetailViewController.h"
+#import "LoginViewController.h"
 
 @interface MasterViewController () 
 
@@ -30,31 +29,11 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
-}
-
-//-(BOOL)logInViewController:(PFLogInViewController * __nonnull)logInController shouldBeginLogInWithUsername:(NSString * __nonnull)username password:(NSString * __nonnull)password {
-//        //check if both fields are compelted.
-//    if (username && password && username.length !=0 && password.length != 0) {
-//        return YES; //
-//    }
-//    
-//    UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Missing Information"
-//                                                                   message:@"Make sure you fill out all of the information, and have your credit card handy!"
-//                                                            preferredStyle:UIAlertControllerStyleAlert];
-//    UIAlertAction *defaultAction = [UIAlertAction actionWithTitle:@"OK, I have reflected on my actions - let me try again!"
-//                                                            style:UIAlertActionStyleDefault
-//                                                          handler:nil];
-//    
-//    [alert addAction:defaultAction];
-//    [self presentViewController:alert
-//                       animated:YES
-//                     completion:nil];
-//    return NO;
-//}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
+    
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(logout:)];
+    self.navigationItem.leftBarButtonItem = logoutButton;
+    
 }
 
 - (void)insertNewObject:(id)sender {
@@ -64,6 +43,25 @@
     [self.objects insertObject:[NSDate date] atIndex:0];
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
     [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
+
+
+- (void)logout:(id)sender {
+    NSLog (@"Logout");
+    
+    [self githubLogout];
+    [self.navigationController popViewControllerAnimated:YES];
+}
+
+-(void)githubLogout {
+//    NSURL *baseURL = [NSURL URLWithString:@""];
+//    AFOAuth2Manager *OAuth2Manager = [[AFOAuth2Manager alloc] initWithBaseURL:baseURL
+//                                                                     clientID:@""
+//                                                                       secret:@""];
+//    return OAuth2Manager;
+    
+    [AFOAuthCredential deleteCredentialWithIdentifier:@"githubOAuthToken"];
 }
 
 #pragma mark - Segues

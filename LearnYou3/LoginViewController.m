@@ -22,6 +22,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    NSLog(@"Viewdidload called");
     // Do any additional setup after loading the view.
 }
 
@@ -29,8 +31,18 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
+    
+    NSLog(@"View Will appear!!");
+    
+    
+    
     if ([AFOAuthCredential retrieveCredentialWithIdentifier:@"githubOAuthToken"]) {
-        [self performSegueWithIdentifier:@"logInToMasterSegueID" sender:nil];
+        
+        NSLog(@"In if statement of retrireveCredential");
+        
+//        if (<#condition#>) {
+            [self performSegueWithIdentifier:@"logInToMasterSegueID" sender:nil];
+//        }
     }
     
         //Notify this instance of the view controller and call method.
@@ -56,10 +68,6 @@
 
 -(void)handleApplicationOpenedForURL:(NSNotification *)notification
 {
-        //Naming: without handle, the name feels more like a URL
-    
-    
-    NSLog(@"Does this get called?????!");
     
     NSURL *url = notification.userInfo[@"url"];
     
@@ -93,17 +101,4 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
-
-
-
