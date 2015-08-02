@@ -11,19 +11,25 @@
 #import "LY3GithubAPIClient.h"
 #import "LY2Constants.h"
 #import <AFNetworking.h>
+#import <AFOAuth2Manager/AFOAuth2Manager.h>
+#import <AFOAuth2Manager/AFHTTPRequestSerializer+OAuth2.h>
 
 @implementation LY3GithubAPIClient
 NSString *const GITHUB_API_baseURL = @"https://api.github.com";
 NSDictionary * defaultParams; //??? How could I implement this?
 
-+(void)getOrgMembershipWithCompletion:(void (^)(NSArray *))completionBlock forOrg:(NSString *)orgName {
++(void)getMembershipforOrg:(NSString *)orgName WithCompletion:(void (^)(NSArray *))completionBlock {
     NSString *getOrgMembershipURL = [NSString stringWithFormat:@"%@/orgs/%@/members?", GITHUB_API_baseURL, orgName];
     NSDictionary *params = @{@"client_id"       : GITHUB_CLIENT_ID,
                              @"client_secret"   : GITHIB_CLIENT_SECRET,
                              @"per_page"        : @"100",
                              @"role"            : @"all"};
     
+    AFOAuthCredential *sessionToken = [AFOAuthCredential retrieveCredentialWithIdentifier:@"githubOAuthToken"];
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager.requestSerializer setAuthorizationHeaderFieldWithCredential:sessionToken];
     
         //Get the org's repos, and pass the info on to the completion block.
     [manager GET:getOrgMembershipURL
@@ -31,17 +37,21 @@ NSDictionary * defaultParams; //??? How could I implement this?
          success:^(NSURLSessionDataTask *task, id responseObject) {
              completionBlock(responseObject);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
-             NSLog(@"Fail: %@", error.localizedDescription);
+             NSLog(@"Fail line 34: %@", error.localizedDescription);
          }];
 }
 
-+(void)getRepositoriesWithCompletion:(void (^)(NSArray *))completionBlock forOrg:(NSString *)orgName {
++(void)getRepositoriesforOrg:(NSString *)orgName WithCompletion:(void (^)(NSArray *))completionBlock {
     NSString *getOrgReposURL = [NSString stringWithFormat:@"%@/orgs/%@/repos?", GITHUB_API_baseURL, orgName];
     NSDictionary *params = @{@"client_id"       : GITHUB_CLIENT_ID,
                              @"client_secret"   : GITHIB_CLIENT_SECRET,
                              @"per_page"        : @"100"};
     
+    AFOAuthCredential *sessionToken = [AFOAuthCredential retrieveCredentialWithIdentifier:@"githubOAuthToken"];
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager.requestSerializer setAuthorizationHeaderFieldWithCredential:sessionToken];
     
         //Get the org's repos, and pass the info on to the completion block.
     [manager GET:getOrgReposURL
@@ -49,18 +59,21 @@ NSDictionary * defaultParams; //??? How could I implement this?
          success:^(NSURLSessionDataTask *task, id responseObject) {
              completionBlock(responseObject);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
-             NSLog(@"Fail: %@", error.localizedDescription);
+             NSLog(@"Fail line 52: %@", error.localizedDescription);
          }];
 }
 
-
-+(void)getRepositoriesWithCompletion:(void (^)(NSArray *repos))completionBlock forUser:(NSString*)userName {
++(void)getRepositoriesforUser:(NSString *)userName WithCompletion:(void (^)(NSArray *))completionBlock {
     NSString *getUserReposURL = [NSString stringWithFormat:@"%@/users/%@/repos?", GITHUB_API_baseURL, userName];
     NSDictionary *params = @{@"client_id"       : GITHUB_CLIENT_ID,
                              @"client_secret"   : GITHIB_CLIENT_SECRET,
                              @"per_page"        : @"100"};
     
+    AFOAuthCredential *sessionToken = [AFOAuthCredential retrieveCredentialWithIdentifier:@"githubOAuthToken"];
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager.requestSerializer setAuthorizationHeaderFieldWithCredential:sessionToken];
     
         //Get the org's repos, and pass the info on to the completion block.
     [manager GET:getUserReposURL
@@ -68,36 +81,47 @@ NSDictionary * defaultParams; //??? How could I implement this?
          success:^(NSURLSessionDataTask *task, id responseObject) {
              completionBlock(responseObject);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
-             NSLog(@"Fail: %@", error.localizedDescription);
+             NSLog(@"Fail line 71: %@", error.localizedDescription);
          }];
 }
 
-+(void)getUserRepositoriesWithCompletion:(void (^)(NSArray *repos))completionBlock {
-    NSString *getCurrentUserReposURL = [NSString stringWithFormat:@"%@/user/repos?", GITHUB_API_baseURL];
++(void)getCurrentUserRepositoriesWithCompletion:(void (^)(NSArray *))completionBlock {
+    NSString *getCurrentUserReposURL = [NSString stringWithFormat:@"%@/user/repos", GITHUB_API_baseURL];
+    
+//    AFOAuth2Manager *authManager = [AFOAuth2Manager alloc] initWithBaseURL:<#(NSURL *)#> clientID:<#(NSString *)#> secret:<#(NSString *)#>
+    
     NSDictionary *params = @{@"client_id" : GITHUB_CLIENT_ID,
                              @"client_secret" : GITHIB_CLIENT_SECRET,
                              @"per_page" : @"100"};
     
+    AFOAuthCredential *sessionToken = [AFOAuthCredential retrieveCredentialWithIdentifier:@"githubOAuthToken"];
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager.requestSerializer setAuthorizationHeaderFieldWithCredential:sessionToken];
     
     [manager GET:getCurrentUserReposURL
       parameters:params
          success:^(NSURLSessionDataTask *task, id responseObject) {
-             NSArray *temp = (NSArray*)responseObject;
-             NSLog(@"%@", [temp description]);
+//             NSArray *temp = (NSArray*)responseObject;
+//             NSLog(@"%@", [temp description]);
              completionBlock(responseObject);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
-             NSLog(@"Fail: %@", error.localizedDescription);
+             NSLog(@"Fail line 90: %@", error.localizedDescription);
          }];
 }
 
-+(void)getRepositoriesWithCompletion:(void (^)(NSArray *))completionBlock forkedFromRepo:(NSString *)repoFullName {
++(void)getRepositoriesForkedFromParentRepo:(NSString *)repoFullName WithCompletion:(void (^)(NSArray *))completionBlock {
     NSString *getRepoForksURL = [NSString stringWithFormat:@"%@/repos/%@/forks", GITHUB_API_baseURL, repoFullName]; //Fullname = owner|org : repoName, e.g., "octocat/helloWorld"
     NSDictionary *params = @{@"client_id"       : GITHUB_CLIENT_ID,
                              @"client_secret"   : GITHIB_CLIENT_SECRET,
                              @"per_page"        : @"100"};
     
+    AFOAuthCredential *sessionToken = [AFOAuthCredential retrieveCredentialWithIdentifier:@"githubOAuthToken"];
+    
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager.requestSerializer setAuthorizationHeaderFieldWithCredential:sessionToken];
     
         //Get the org's repos, and pass the info on to the completion block.
     [manager GET:getRepoForksURL
@@ -105,7 +129,7 @@ NSDictionary * defaultParams; //??? How could I implement this?
          success:^(NSURLSessionDataTask *task, id responseObject) {
              completionBlock(responseObject);
          } failure:^(NSURLSessionDataTask *task, NSError *error) {
-             NSLog(@"Fail: %@", error.localizedDescription);
+             NSLog(@"Fail line 108: %@", error.localizedDescription);
          }];
 }
 

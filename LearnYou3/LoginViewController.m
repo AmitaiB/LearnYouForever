@@ -38,11 +38,8 @@
     
     if ([AFOAuthCredential retrieveCredentialWithIdentifier:@"githubOAuthToken"]) {
         
-        NSLog(@"In if statement of retrireveCredential");
-        
-//        if (<#condition#>) {
+        NSLog(@"In if statement of retrieveCredential");
             [self performSegueWithIdentifier:@"logInToMasterSegueID" sender:nil];
-//        }
     }
     
         //Notify this instance of the view controller and call method.

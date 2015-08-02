@@ -10,11 +10,11 @@
 
 @interface LY3GithubAPIClient : NSObject
 
-+(void)getOrgMembershipWithCompletion:(void (^)(NSArray *repos))completionBlock forOrg:(NSString*)orgName;
-+(void)getRepositoriesWithCompletion:(void (^)(NSArray *repos))completionBlock forOrg:(NSString*)orgName;
-+(void)getRepositoriesWithCompletion:(void (^)(NSArray *repos))completionBlock forUser:(NSString*)userName;
-+(void)getUserRepositoriesWithCompletion:(void (^)(NSArray *repos))completionBlock;
-+(void)getRepositoriesWithCompletion:(void (^)(NSArray *))completionBlock forkedFromRepo:(NSString *)repoFullName;
++(void)getMembershipforOrg:(NSString*)orgName WithCompletion:(void (^)(NSArray *repos))completionBlock;
++(void)getRepositoriesforOrg:(NSString*)orgName WithCompletion:(void (^)(NSArray *repos))completionBlock;
++(void)getRepositoriesforUser:(NSString*)userName WithCompletion:(void (^)(NSArray *repos))completionBlock;
++(void)getCurrentUserRepositoriesWithCompletion:(void (^)(NSArray *repos))completionBlock;
++(void)getRepositoriesForkedFromParentRepo:(NSString *)repoFullName WithCompletion:(void (^)(NSArray *))completionBlock;
 
 
 @end

@@ -26,16 +26,18 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
 
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-    self.navigationItem.rightBarButtonItem = addButton;
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+//    self.navigationItem.rightBarButtonItem = addButton;
     
     
-    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(logout:)];
+//    UIImage *logoutImage = [UIImage imageWithCIImage:[CIImage imageWithContentsOfURL:[NSURL URLWithString:@"https://files.slack.com/files-pri/T02MD9XTF-F08FYFSRE/logout-100x100.png"]]];
+
+    UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"logout"] style:UIBarButtonItemStylePlain target:self action:@selector(logout:)];
     self.navigationItem.leftBarButtonItem = logoutButton;
     
-    [LY3GithubAPIClient getUserRepositoriesWithCompletion:^(NSArray *repos) {
+    [LY3GithubAPIClient getCurrentUserRepositoriesWithCompletion:^(NSArray *repos) {
         NSLog(@"I will alog you asecond tame-ah!");
     }];
     
