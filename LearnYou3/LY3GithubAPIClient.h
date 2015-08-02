@@ -10,8 +10,7 @@
 
 @interface LY3GithubAPIClient : NSObject
 
-
-+ (void)getOrgAdminsAndMembersWithCompletion:(void (^)(NSArray *userList))completionBlock;
++(void)getOrgMembershipWithCompletion:(void (^)(NSArray *repos))completionBlock forOrg:(NSString*)orgName;
 +(void)getRepositoriesWithCompletion:(void (^)(NSArray *repos))completionBlock forOrg:(NSString*)orgName;
 +(void)getRepositoriesWithCompletion:(void (^)(NSArray *repos))completionBlock forUser:(NSString*)userName;
 +(void)getRepositoriesWithCompletion:(void (^)(NSArray *))completionBlock forkedFromRepo:(NSString *)repoFullName;
