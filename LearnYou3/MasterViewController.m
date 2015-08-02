@@ -37,9 +37,16 @@
     UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"logout"] style:UIBarButtonItemStylePlain target:self action:@selector(logout:)];
     self.navigationItem.leftBarButtonItem = logoutButton;
     
+    __block NSMutableArray *results = [NSMutableArray new];
+    
     [LY3GithubAPIClient getCurrentUserRepositoriesWithCompletion:^(NSArray *repos) {
-        NSLog(@"I will alog you asecond tame-ah!");
+        for (NSDictionary *repo in repos) {
+            [results addObject:repo[@"full_name"]];
+        }
+        NSLog(@"I will alog you asecond tame-ah!: %@", [results description]);
+        [self.tableView reloadData];
     }];
+    self.objects = results;
     
 }
 
@@ -73,7 +80,7 @@
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 2; //Labs forked-not-pulled, and labs forked-and-pulled.
+    return 1; //Labs forked-not-pulled, and labs forked-and-pulled.
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -83,8 +90,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = [object description];
+//    NSDate *object = self.objects[indexPath.row];
+    cell.textLabel.text = self.objects[indexPath.row];
     return cell;
 }
 
