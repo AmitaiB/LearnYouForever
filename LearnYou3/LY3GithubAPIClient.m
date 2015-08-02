@@ -72,6 +72,25 @@ NSDictionary * defaultParams; //??? How could I implement this?
          }];
 }
 
++(void)getUserRepositoriesWithCompletion:(void (^)(NSArray *repos))completionBlock {
+    NSString *getCurrentUserReposURL = [NSString stringWithFormat:@"%@/user/repos?", GITHUB_API_baseURL];
+    NSDictionary *params = @{@"client_id" : GITHUB_CLIENT_ID,
+                             @"client_secret" : GITHIB_CLIENT_SECRET,
+                             @"per_page" : @"100"};
+    
+    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
+    
+    [manager GET:getCurrentUserReposURL
+      parameters:params
+         success:^(NSURLSessionDataTask *task, id responseObject) {
+             NSArray *temp = (NSArray*)responseObject;
+             NSLog(@"%@", [temp description]);
+             completionBlock(responseObject);
+         } failure:^(NSURLSessionDataTask *task, NSError *error) {
+             NSLog(@"Fail: %@", error.localizedDescription);
+         }];
+}
+
 +(void)getRepositoriesWithCompletion:(void (^)(NSArray *))completionBlock forkedFromRepo:(NSString *)repoFullName {
     NSString *getRepoForksURL = [NSString stringWithFormat:@"%@/repos/%@/forks", GITHUB_API_baseURL, repoFullName]; //Fullname = owner|org : repoName, e.g., "octocat/helloWorld"
     NSDictionary *params = @{@"client_id"       : GITHUB_CLIENT_ID,

@@ -9,6 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "LoginViewController.h"
+#import "LY3GithubAPIClient.h"
 
 @interface MasterViewController () 
 
@@ -34,18 +35,11 @@
     UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemRewind target:self action:@selector(logout:)];
     self.navigationItem.leftBarButtonItem = logoutButton;
     
+    [LY3GithubAPIClient getUserRepositoriesWithCompletion:^(NSArray *repos) {
+        NSLog(@"I will alog you asecond tame-ah!");
+    }];
+    
 }
-
-- (void)insertNewObject:(id)sender {
-    if (!self.objects) {
-        self.objects = [[NSMutableArray alloc] init];
-    }
-    [self.objects insertObject:[NSDate date] atIndex:0];
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-}
-
-
 
 - (void)logout:(id)sender {
     NSLog (@"Logout");
@@ -77,7 +71,7 @@
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 2; //Labs forked-not-pulled, and labs forked-and-pulled.
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
