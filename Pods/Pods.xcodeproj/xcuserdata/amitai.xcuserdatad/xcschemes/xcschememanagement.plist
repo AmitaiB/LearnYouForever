@@ -39,75 +39,50 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Regexer.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>15734088C097367CEAB0F0C8F2E62DED</key>
+		<key>0449B2D93A26CB4CC39046F23F07AC9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3154EE06C4E6899E5EF0EE30D2304721</key>
+		<key>13A61D93529258DBA14D4C7676953320</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>38F2C91E76D0853C7229227F891D9247</key>
+		<key>3C13CBCF8D211D18B9C77B34A390FDA0</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4754DCD23ABACC8F4E6800132B661FFC</key>
+		<key>A3749AF92912F37B61411FA8FDC9E085</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>711E229328D5D37DC3A336CFD7D8B1E4</key>
+		<key>C23019401D0939DFFAFFB4B628AEBF3B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>786BE990CECE3EEE15FDF3E6325E31E3</key>
+		<key>CB90BFCE8499C231B0C3B1C61513BD4E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AB5F20399C4DC1AB0EB2DC8F9192AE0F</key>
+		<key>D0249730D969331DE64D0E0230FFC042</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AE008AF69D435867475C3A42D2A410B2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BE5C01FBCCD8DE05BEDE44C329502C3E</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BFE1855608A70F728D21044DD6B48A74</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>BFE1AD5A00C97A1D5D53EB49F69FC763</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>C76C5C76102D967C7FDA8322E007C0D2</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>EA121A35349B39C16CC1191E33C07922</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FFD47C204FCC691C74A5E7B4D4FCE325</key>
+		<key>D616006C396510936CE66AC12F9E811C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

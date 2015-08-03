@@ -11,6 +11,7 @@
 #import "LoginViewController.h"
 #import "LY3GithubAPIClient.h"
 #import <Parse.h>
+#import <Regexer.h>
 
 @interface MasterViewController () 
 
@@ -49,6 +50,12 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
         NSLog(@"userName: %@", username);
         
         NSLog(@"NSURLResponse digging: %@", [[(NSHTTPURLResponse*)task.response allHeaderFields] description]);
+        NSHTTPURLResponse *response = task.response;
+        NSString *linkHeaderText = response.allHeaderFields[@"Link"];
+        NSLog(@"link header tedxt: %@", linkHeaderText);
+        NSString *rxPattern = @"\\d+(?=>; rel=\"last\")";
+        NSString *paginationString = [linkHeaderText rx_textsForMatchesWithPattern:rxPattern][0];
+        NSLog(@"pagination string: %@", paginationString);
         
     }];
     self.objects = results;
