@@ -83,7 +83,6 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
     
     [super viewDidAppear:animated];
     
-    NSLog(@"Getting called?");
     
     NSLog(@"Count of objects; %ld", [self.objects count]);
     
@@ -135,9 +134,6 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
     cell.leftUtilityButtons = [self leftButtons];
     cell.rightUtilityButtons = [self rightButtons];
     cell.delegate = self;
-    
-    
-    NSLog(@"WHEN DO YOU GET CALLED!!!!======");
         
     return cell;
 }
