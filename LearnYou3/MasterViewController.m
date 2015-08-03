@@ -136,6 +136,7 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
 //    return rightUtilityButtons;
 //}
 
+
 - (NSArray *)leftButtons
 {
     NSMutableArray *leftUtilityButtons = [NSMutableArray new];
@@ -176,5 +177,10 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
     
     [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
+
+-(bool)swipeableTableViewCellShouldHideUtilityButtonsOnSwipe:(SWTableViewCell *)cell{
+    return YES;
+}
+
 
 @end
