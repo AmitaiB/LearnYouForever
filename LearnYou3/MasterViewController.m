@@ -12,10 +12,12 @@
 #import "LY3GithubAPIClient.h"
 #import <Parse.h>
 #import <Regexer.h>
+#import <SWTableViewCell/SWTableViewCell.h>
 
-@interface MasterViewController () 
 
-@property NSMutableArray *objects;
+@interface MasterViewController () <SWTableViewCellDelegate>
+
+@property (nonatomic, strong) NSMutableArray *objects;
 @property (nonatomic, strong) NSString *userName;
 
 @end
@@ -30,7 +32,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-        //Our beautiful logout button.
+    //Our beautiful logout button.
     UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"logout"] style:UIBarButtonItemStylePlain target:self action:@selector(logout:)];
     self.navigationItem.leftBarButtonItem = logoutButton;
     
@@ -45,6 +47,7 @@
         }
 NSLog(@"Inside currentUserRepos completion block -- Results: %@", [results description]);
         [self.tableView reloadData];
+        
 NSLog(@"Results is of length: %lu", (unsigned long)results.count);
         NSString *username = repos[0][@"owner"][@"login"];
         NSLog(@"userName: %@", username);
@@ -56,9 +59,37 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
         NSString *rxPattern = @"\\d+(?=>; rel=\"last\")";
         NSString *paginationString = [linkHeaderText rx_textsForMatchesWithPattern:rxPattern][0];
         NSLog(@"pagination string: %@", paginationString);
+//        raw = [[[NSArray alloc] initWithArray:repos copyItems:YES]mutableCopy];
+//        NSLog(@"raw is of class: %@, \nof length: %lu", [[raw class] description], (unsigned long)results.count);
+//        NSString *username = raw[0][@"owner"][@"login"];
+//        
+//        NSLog(@"The username is :%@", username);
+//        self.objects = results;
+//        
+//        [self.tableView reloadData];
+//        
+//        NSLog(@"COUNT ON VIEWDIDLOAD: %ld", [self.objects count]);
+        
         
     }];
-    self.objects = results;
+    
+    
+    
+    //    self.objects = results;
+    
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
+    [super viewDidAppear:animated];
+    
+    NSLog(@"Getting called?");
+    
+    NSLog(@"Count of objects; %ld", [self.objects count]);
+    
+    
+    //    [self.tableView reloadData];
+    
     
 }
 
@@ -70,11 +101,6 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
 }
 
 -(void)githubLogout {
-//    NSURL *baseURL = [NSURL URLWithString:@""];
-//    AFOAuth2Manager *OAuth2Manager = [[AFOAuth2Manager alloc] initWithBaseURL:baseURL
-//                                                                     clientID:@""
-//                                                                       secret:@""];
-//    return OAuth2Manager;
     
     [AFOAuthCredential deleteCredentialWithIdentifier:@"githubOAuthToken"];
 }
@@ -83,6 +109,7 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
+        
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSDate *object = self.objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
@@ -99,18 +126,60 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
     return self.objects.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
-//    NSDate *object = self.objects[indexPath.row];
-    cell.textLabel.text = self.objects[indexPath.row];
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    SWTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    
+    cell.textLabel.text = self.objects[indexPath.row];
+    cell.leftUtilityButtons = [self leftButtons];
+    cell.rightUtilityButtons = [self rightButtons];
+    cell.delegate = self;
+    
+    
+    NSLog(@"WHEN DO YOU GET CALLED!!!!======");
+        
     return cell;
 }
 
+- (NSArray *)rightButtons
+{
+    NSMutableArray *rightUtilityButtons = [NSMutableArray new];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.78f green:0.78f blue:0.8f alpha:1.0]
+                                                title:@"More"];
+    [rightUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:0.231f blue:0.188 alpha:1.0f]
+                                                title:@"Delete"];
+    
+    return rightUtilityButtons;
+}
+
+- (NSArray *)leftButtons
+{
+    NSMutableArray *leftUtilityButtons = [NSMutableArray new];
+    
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.07 green:0.75f blue:0.16f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"check.png"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:1.0f blue:0.35f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"clock.png"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:1.0f green:0.231f blue:0.188f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"cross.png"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.55f green:0.27f blue:0.07f alpha:1.0]
+                                                icon:[UIImage imageNamed:@"list.png"]];
+    
+    return leftUtilityButtons;
+}
+
+
+
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
     // Return NO if you do not want the specified item to be editable.
-    return YES;
+    return NO;
 }
 
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -120,6 +189,11 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
     } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view.
     }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    [self performSegueWithIdentifier:@"showDetail" sender:self];
 }
 
 @end

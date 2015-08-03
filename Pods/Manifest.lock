@@ -28,7 +28,11 @@ PODS:
     - Bolts/Tasks (>= 1.2.0)
   - ParseUI (1.1.4):
     - Parse (~> 1.7)
+<<<<<<< HEAD
   - Regexer (1.3.1)
+=======
+  - SWTableViewCell (0.3.7)
+>>>>>>> Implementation of SWTableViewCell
 
 DEPENDENCIES:
   - AFNetworking
@@ -36,7 +40,11 @@ DEPENDENCIES:
   - GitHubOAuthController
   - Parse
   - ParseUI
+<<<<<<< HEAD
   - Regexer (~> 1.3)
+=======
+  - SWTableViewCell
+>>>>>>> Implementation of SWTableViewCell
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
@@ -45,6 +53,10 @@ SPEC CHECKSUMS:
   GitHubOAuthController: 6d147f984e1ce5863b522ee3fb7a453468102974
   Parse: 373adbb1ad2e34d383542c3b28f678c49ebe4881
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
+<<<<<<< HEAD
   Regexer: c8f2bbfe832a8ec1e728b525e0b9ac814513d827
+=======
+  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
+>>>>>>> Implementation of SWTableViewCell
 
 COCOAPODS: 0.38.2
