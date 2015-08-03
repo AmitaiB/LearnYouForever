@@ -18,9 +18,10 @@
 
 @implementation LY3RandomOctocatAPIClient
 
-+(void)populateOctocatURLArrayWithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *octocats))completionBlock{
++(void)populateOctocatURLArrayWithCompletion:(void (^)(NSURLSessionDataTask *task, NSDictionary *octodex))completionBlock{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSDictionary *params = @{@"_apikey" : IMPORT_IO_API_KEY};
+    NSDictionary *params = @{@"_apikey" : IMPORT_IO_API_KEY,
+                             @"_input/webpage/url" : @"https%3A%2F%2Foctodex.github.com%2F", @"_user" : IMPORT_IO_USER_ID};
     
     [manager GET:OCTOCAT_API_URL
       parameters:params
@@ -32,9 +33,10 @@
          }];
 }
 
-+(void)getOctocatImageFromURL:(NSString *)octocatURL WithCompletion:(void (^)(NSURLSessionDataTask *, NSArray *))completionBlock {
++(void)getOctocatImageFromURL:(NSString *)octocatURL WithCompletion:(void (^)(NSURLSessionDataTask *task, UIImage *octocat))completionBlock {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    NSDictionary *params = @{@"_apikey" : IMPORT_IO_API_KEY};
+    NSDictionary *params = @{@"_apikey" : IMPORT_IO_API_KEY,
+                             @"_input/webpage/url" : @"https%3A%2F%2Foctodex.github.com%2F", @"_user" : IMPORT_IO_USER_ID};
     
     [manager GET:octocatURL
       parameters:params

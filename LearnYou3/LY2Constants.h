@@ -17,5 +17,7 @@ extern NSString * const REST_API_KEY;
 extern NSString * const OCTOCAT_API_URL;
 extern NSString * const IMPORT_IO_USER_ID;
 extern NSString * const IMPORT_IO_API_KEY;
+extern NSString * const PARSE_APP_ID;
+extern NSString * const PARSE_CLIENT_KEY;
 
 @end

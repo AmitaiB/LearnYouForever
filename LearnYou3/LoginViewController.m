@@ -12,10 +12,12 @@
 #import <AFOAuth2Manager/AFHTTPRequestSerializer+OAuth2.h>
 #import "LY2Constants.h"
 #import <GitHubOAuthController.h>
+#import "LY3RandomOctocatAPIClient.h"
 
 @interface LoginViewController ()
 - (IBAction)githubButtonWasTapped:(id)sender;
 - (IBAction)invisibleButtonTapped:(id)sender;
+@property (nonatomic, strong) NSArray *octocatURLs;
 
 @end
 
@@ -26,6 +28,8 @@
     
     NSLog(@"Viewdidload called");
     // Do any additional setup after loading the view.
+    
+   
 }
 
 
@@ -95,6 +99,15 @@
 }
 
 - (IBAction)invisibleButtonTapped:(id)sender {
+    if (!self.octocatURLs.count) {
+        [LY3RandomOctocatAPIClient populateOctocatURLArrayWithCompletion:^(NSURLSessionDataTask *task, NSDictionary *octodex) {
+            NSMutableArray *octoURLs = [NSMutableArray new];
+            for (NSDictionary *octoDict in octodex[@"results"]) {
+                [octoURLs addObject:octoDict[@"preview_image"]];
+            }
+            NSLog(@"octoURLs: %@!", [octoURLs description]);
+        }];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

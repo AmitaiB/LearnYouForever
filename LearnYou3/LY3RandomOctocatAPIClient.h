@@ -7,12 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface LY3RandomOctocatAPIClient : NSObject
 
-+(void)populateOctocatURLArrayWithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *octocats))completionBlock;
++(void)populateOctocatURLArrayWithCompletion:(void (^)(NSURLSessionDataTask *task, NSDictionary *octodex))completionBlock;
 
-+(void)getOctocatImageFromURL:(NSString*)octocatURL WithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *octocats))completionBlock;
++(void)getOctocatImageFromURL:(NSString*)octocatURL WithCompletion:(void (^)(NSURLSessionDataTask *task, UIImage *octocat))completionBlock;
 
 
 @end
