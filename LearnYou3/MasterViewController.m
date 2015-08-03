@@ -182,5 +182,8 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
     return YES;
 }
 
+-(void) swipeableTableViewCell:(SWTableViewCell *)cell didTriggerLeftUtilityButtonWithIndex:(NSInteger)index{
+    NSLog(@"Button at index [%ld] tapped", index);
+}
 
 @end
