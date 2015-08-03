@@ -15,6 +15,7 @@
 
 @interface LoginViewController ()
 - (IBAction)githubButtonWasTapped:(id)sender;
+- (IBAction)invisibleButtonTapped:(id)sender;
 
 @end
 
@@ -91,6 +92,9 @@
                                                                                      } failure:nil];
     
     [oAuthController showModalFromController:self];
+}
+
+- (IBAction)invisibleButtonTapped:(id)sender {
 }
 
 - (void)didReceiveMemoryWarning {
