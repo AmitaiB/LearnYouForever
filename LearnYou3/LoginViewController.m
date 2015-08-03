@@ -13,6 +13,7 @@
 #import "LY2Constants.h"
 #import <GitHubOAuthController.h>
 #import "LY3RandomOctocatAPIClient.h"
+#import <Parse.h>
 
 @interface LoginViewController ()
 - (IBAction)githubButtonWasTapped:(id)sender;
@@ -99,14 +100,25 @@
 }
 
 - (IBAction)invisibleButtonTapped:(id)sender {
-    if (!self.octocatURLs.count) {
+    
+    if (!PFObjectDefaultPin) {
+        PFObject *octocatURLs = [PFObject objectWithClassName:@"OctocatURLs"];
+//    }
+//
+//    if (!self.octocatURLs.count) {
         [LY3RandomOctocatAPIClient populateOctocatURLArrayWithCompletion:^(NSURLSessionDataTask *task, NSDictionary *octodex) {
             NSMutableArray *octoURLs = [NSMutableArray new];
             for (NSDictionary *octoDict in octodex[@"results"]) {
                 [octoURLs addObject:octoDict[@"preview_image"]];
             }
+            octocatURLs[@"octodexArray"] = octoURLs;
+            [octocatURLs pinInBackground];
             NSLog(@"octoURLs: %@!", [octoURLs description]);
         }];
+    } else {
+        PFQuery *query = [PFQuery queryWithClassName:@"OctocatURLs"];
+        PFObject *octocatURLs = query.fromPin;
+        NSLog(@"octocatURLs Parse object: %@", octocatURLs);
     }
 }
 
