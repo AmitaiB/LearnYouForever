@@ -7,6 +7,7 @@ pod 'ParseUI'
 pod 'AFNetworking'
 pod 'AFOAuth2Manager'
 pod 'GitHubOAuthController'
+pod 'SWTableViewCell'
 end
 
 target 'LearnYou3Tests' do
