@@ -8,6 +8,8 @@ pod 'AFNetworking'
 pod 'AFOAuth2Manager'
 pod 'GitHubOAuthController'
 pod 'SWTableViewCell'
+pod 'Regexer', '~> 1.3'
+
 end
 
 target 'LearnYou3Tests' do

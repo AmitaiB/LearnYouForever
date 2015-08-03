@@ -35,17 +35,20 @@
     
     __block NSMutableArray *results = [NSMutableArray new];
     __block NSMutableArray *raw = [NSMutableArray new];
+    __block NSUInteger pagination = 1;
     
-    [LY3GithubAPIClient getCurrentUserRepositoriesWithCompletion:^(NSArray *repos) {
+    [LY3GithubAPIClient getCurrentUserRepositoriesWithCompletion:^(NSURLSessionDataTask *task, NSArray *repos) {
+            //Populates an array with the repos requested.
         for (NSDictionary *repo in repos) {
             [results addObject:repo[@"full_name"]];
         }
-        NSLog(@"I will alog you asecond tame-ah!: %@", [results description]);
+NSLog(@"Inside currentUserRepos completion block -- Results: %@", [results description]);
         [self.tableView reloadData];
-        raw = [[[NSArray alloc] initWithArray:repos copyItems:YES]mutableCopy];
-        NSLog(@"raw is of class: %@, \nof length: %lu", [[raw class] description], (unsigned long)results.count);
-        NSString *username = raw[0][@"owner"][@"login"];
-        NSLog(username);
+NSLog(@"Results is of length: %lu", (unsigned long)results.count);
+        NSString *username = repos[0][@"owner"][@"login"];
+        NSLog(@"userName: %@", username);
+        
+        NSLog(@"NSURLResponse digging: %@", [[(NSHTTPURLResponse*)task.response allHeaderFields] description]);
         
     }];
     self.objects = results;
