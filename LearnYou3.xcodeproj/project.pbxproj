@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07006C791B6FA58C00B8C097 /* LY2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 07006C781B6FA58C00B8C097 /* LY2Constants.m */; };
+		0719A1621B6FE1080077DBDD /* LY2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0719A1611B6FE1080077DBDD /* LY2Constants.m */; };
 		38A79B1F1B6E780400C0C0A5 /* LY3GithubAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A79B1E1B6E780400C0C0A5 /* LY3GithubAPIClient.m */; };
 		38B9283C1B6AF6F20069872B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B9283B1B6AF6F20069872B /* LoginViewController.m */; };
 		38B928421B6B052B0069872B /* Notes to Selves.md in Resources */ = {isa = PBXBuildFile; fileRef = 38B928411B6B052B0069872B /* Notes to Selves.md */; };
@@ -35,7 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07006C781B6FA58C00B8C097 /* LY2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY2Constants.m; sourceTree = "<group>"; };
+		0719A1611B6FE1080077DBDD /* LY2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY2Constants.m; sourceTree = "<group>"; };
 		386B8E741B6EC10200B53693 /* LY2Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LY2Constants.h; sourceTree = "<group>"; };
 		38A79B1D1B6E780400C0C0A5 /* LY3GithubAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY3GithubAPIClient.h; sourceTree = "<group>"; };
 		38A79B1E1B6E780400C0C0A5 /* LY3GithubAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY3GithubAPIClient.m; sourceTree = "<group>"; };
@@ -130,7 +130,7 @@
 			children = (
 				38E97B491B6858250091BACA /* Info.plist */,
 				386B8E741B6EC10200B53693 /* LY2Constants.h */,
-				07006C781B6FA58C00B8C097 /* LY2Constants.m */,
+				0719A1611B6FE1080077DBDD /* LY2Constants.m */,
 				38E97B4B1B68582E0091BACA /* main.m */,
 			);
 			name = "Supporting Files";
@@ -313,7 +313,7 @@
 				38A79B1F1B6E780400C0C0A5 /* LY3GithubAPIClient.m in Sources */,
 				38E97B521B6858540091BACA /* MasterViewController.m in Sources */,
 				38B9283C1B6AF6F20069872B /* LoginViewController.m in Sources */,
-				07006C791B6FA58C00B8C097 /* LY2Constants.m in Sources */,
+				0719A1621B6FE1080077DBDD /* LY2Constants.m in Sources */,
 				38E97B4C1B68582E0091BACA /* main.m in Sources */,
 				38E97B481B6858050091BACA /* DetailViewController.m in Sources */,
 			);
