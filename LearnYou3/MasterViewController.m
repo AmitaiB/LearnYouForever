@@ -10,10 +10,13 @@
 #import "DetailViewController.h"
 #import "LoginViewController.h"
 #import "LY3GithubAPIClient.h"
+#import <Parse.h>
 
 @interface MasterViewController () 
 
 @property NSMutableArray *objects;
+@property (nonatomic, strong) NSString *userName;
+
 @end
 
 @implementation MasterViewController
@@ -26,18 +29,12 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
-    
-    
-//    UIImage *logoutImage = [UIImage imageWithCIImage:[CIImage imageWithContentsOfURL:[NSURL URLWithString:@"https://files.slack.com/files-pri/T02MD9XTF-F08FYFSRE/logout-100x100.png"]]];
-
+        //Our beautiful logout button.
     UIBarButtonItem *logoutButton = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"logout"] style:UIBarButtonItemStylePlain target:self action:@selector(logout:)];
     self.navigationItem.leftBarButtonItem = logoutButton;
     
     __block NSMutableArray *results = [NSMutableArray new];
+    __block NSMutableArray *raw = [NSMutableArray new];
     
     [LY3GithubAPIClient getCurrentUserRepositoriesWithCompletion:^(NSArray *repos) {
         for (NSDictionary *repo in repos) {
@@ -45,6 +42,11 @@
         }
         NSLog(@"I will alog you asecond tame-ah!: %@", [results description]);
         [self.tableView reloadData];
+        raw = [[[NSArray alloc] initWithArray:repos copyItems:YES]mutableCopy];
+        NSLog(@"raw is of class: %@, \nof length: %lu", [[raw class] description], (unsigned long)results.count);
+        NSString *username = raw[0][@"owner"][@"login"];
+        NSLog(username);
+        
     }];
     self.objects = results;
     
@@ -92,6 +94,7 @@
 
 //    NSDate *object = self.objects[indexPath.row];
     cell.textLabel.text = self.objects[indexPath.row];
+    
     return cell;
 }
 

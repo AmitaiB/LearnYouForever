@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		38A79B1C1B6E752800C0C0A5 /* LY2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A79B1B1B6E752800C0C0A5 /* LY2Constants.m */; };
 		38A79B1F1B6E780400C0C0A5 /* LY3GithubAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A79B1E1B6E780400C0C0A5 /* LY3GithubAPIClient.m */; };
-		38A79B251B6EB36300C0C0A5 /* LY3DataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A79B241B6EB36300C0C0A5 /* LY3DataStore.m */; };
 		38B9283C1B6AF6F20069872B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B9283B1B6AF6F20069872B /* LoginViewController.m */; };
 		38B928421B6B052B0069872B /* Notes to Selves.md in Resources */ = {isa = PBXBuildFile; fileRef = 38B928411B6B052B0069872B /* Notes to Selves.md */; };
 		38B928461B6BB17C0069872B /* Notes to LoginViewController in Resources */ = {isa = PBXBuildFile; fileRef = 38B928451B6BB17C0069872B /* Notes to LoginViewController */; };
@@ -41,8 +40,6 @@
 		38A79B1B1B6E752800C0C0A5 /* LY2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY2Constants.m; sourceTree = "<group>"; };
 		38A79B1D1B6E780400C0C0A5 /* LY3GithubAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY3GithubAPIClient.h; sourceTree = "<group>"; };
 		38A79B1E1B6E780400C0C0A5 /* LY3GithubAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY3GithubAPIClient.m; sourceTree = "<group>"; };
-		38A79B231B6EB36300C0C0A5 /* LY3DataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY3DataStore.h; sourceTree = "<group>"; };
-		38A79B241B6EB36300C0C0A5 /* LY3DataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY3DataStore.m; sourceTree = "<group>"; };
 		38B9283A1B6AF6F20069872B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		38B9283B1B6AF6F20069872B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		38B928411B6B052B0069872B /* Notes to Selves.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Notes to Selves.md"; sourceTree = "<group>"; };
@@ -115,8 +112,6 @@
 				38E97B511B6858540091BACA /* MasterViewController.m */,
 				38A79B1D1B6E780400C0C0A5 /* LY3GithubAPIClient.h */,
 				38A79B1E1B6E780400C0C0A5 /* LY3GithubAPIClient.m */,
-				38A79B231B6EB36300C0C0A5 /* LY3DataStore.h */,
-				38A79B241B6EB36300C0C0A5 /* LY3DataStore.m */,
 				38E97B461B6858050091BACA /* DetailViewController.h */,
 				38E97B471B6858050091BACA /* DetailViewController.m */,
 				38B9283A1B6AF6F20069872B /* LoginViewController.h */,
@@ -314,7 +309,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				38A79B251B6EB36300C0C0A5 /* LY3DataStore.m in Sources */,
 				38E97B451B6857F30091BACA /* AppDelegate.m in Sources */,
 				38A79B1F1B6E780400C0C0A5 /* LY3GithubAPIClient.m in Sources */,
 				38A79B1C1B6E752800C0C0A5 /* LY2Constants.m in Sources */,

@@ -2,12 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:LY3DataStoreClient.h">
-   </FileRef>
-   <FileRef
-      location = "group:LY3DataStoreClient.m">
-   </FileRef>
-   <FileRef
       location = "group:LearnYou3.xcodeproj">
    </FileRef>
    <FileRef
