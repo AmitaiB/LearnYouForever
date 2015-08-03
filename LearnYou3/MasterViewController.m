@@ -53,29 +53,14 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
         NSLog(@"userName: %@", username);
         
         NSLog(@"NSURLResponse digging: %@", [[(NSHTTPURLResponse*)task.response allHeaderFields] description]);
-        NSHTTPURLResponse *response = task.response;
+        NSHTTPURLResponse *response = (NSHTTPURLResponse*)task.response;
         NSString *linkHeaderText = response.allHeaderFields[@"Link"];
         NSLog(@"link header tedxt: %@", linkHeaderText);
         NSString *rxPattern = @"\\d+(?=>; rel=\"last\")";
         NSString *paginationString = [linkHeaderText rx_textsForMatchesWithPattern:rxPattern][0];
         NSLog(@"pagination string: %@", paginationString);
-//        raw = [[[NSArray alloc] initWithArray:repos copyItems:YES]mutableCopy];
-//        NSLog(@"raw is of class: %@, \nof length: %lu", [[raw class] description], (unsigned long)results.count);
-//        NSString *username = raw[0][@"owner"][@"login"];
-//        
-//        NSLog(@"The username is :%@", username);
-//        self.objects = results;
-//        
-//        [self.tableView reloadData];
-//        
-//        NSLog(@"COUNT ON VIEWDIDLOAD: %ld", [self.objects count]);
-        
-        
     }];
-    
-    
-    
-    //    self.objects = results;
+        self.objects = results;
     
 }
 
