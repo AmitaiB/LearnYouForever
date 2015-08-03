@@ -141,11 +141,11 @@ NSLog(@"Results is of length: %lu", (unsigned long)results.count);
     NSMutableArray *leftUtilityButtons = [NSMutableArray new];
     
     [leftUtilityButtons sw_addUtilityButtonWithColor:
-     [UIColor colorWithRed:0.263 green:0.522 blue:0.961 alpha:1]
-                                                icon:[UIImage imageNamed:@"check.png"]];
-    [leftUtilityButtons sw_addUtilityButtonWithColor:
      [UIColor colorWithRed:0.988 green:0.745 blue:0.122 alpha:1]
-                                                icon:[UIImage imageNamed:@"clock.png"]];
+                                                icon:[UIImage imageNamed:@"star.png"]];
+    [leftUtilityButtons sw_addUtilityButtonWithColor:
+     [UIColor colorWithRed:0.263 green:0.522 blue:0.961 alpha:1]
+                                                icon:[UIImage imageNamed:@"question.png"]];
 //    [leftUtilityButtons sw_addUtilityButtonWithColor:
 //     [UIColor colorWithRed:1.0f green:0.231f blue:0.188f alpha:1.0]
 //                                                icon:[UIImage imageNamed:@"cross.png"]];
