@@ -25,9 +25,6 @@
 @property (nonatomic, strong) NSMutableArray *octocatURLsArray;
 @property (weak, nonatomic) IBOutlet DLImageView *octocatDLImageView;
 
-
-
-
 @end
 
 @implementation LoginViewController
@@ -112,10 +109,10 @@
 
 -(void)randomizeOctocat:(PFObject*)object {
     NSLog(@"PFObject.allKeys = %@", object.allKeys);
-    NSArray *octodex = object[@"octocatURLs"];
-    NSLog(@"octodex.count = %@", [@(octodex.count) stringValue]);
-    NSUInteger random = (NSUInteger)[self randomFloatBetweenNumber:0 andNumber:octodex.count - 1];
-    NSString *randomOCatURL = octodex[random];
+    NSArray *octodex         = object[@"octocatURLs"];
+    NSLog(@"octodex.count    = %@", [@(octodex.count) stringValue]);
+    NSUInteger random        = (NSUInteger)[self randomFloatBetweenNumber:0 andNumber:octodex.count - 1];
+    NSString *randomOCatURL  = octodex[random];
     NSLog(@"Random0CatURL: %@", randomOCatURL);
     [self.octocatDLImageView displayImageFromUrl:randomOCatURL];
 }
