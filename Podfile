@@ -9,6 +9,8 @@ pod 'AFOAuth2Manager'
 pod 'GitHubOAuthController'
 pod 'SWTableViewCell'
 pod 'Regexer', '~> 1.3'
+pod 'DLImageLoader', '~> 2.1'
+
 
 end
 

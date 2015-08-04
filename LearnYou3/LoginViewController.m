@@ -5,6 +5,7 @@
 //  Created by Amitai Blickstein on 7/30/15.
 //  Copyright (c) 2015 Amitai Blickstein, LLC. All rights reserved.
 //
+#define ARC4RANDOM_MAX 0x100000000
 
 #import "LoginViewController.h"
 #import <AFNetworking.h>
@@ -12,9 +13,20 @@
 #import <AFOAuth2Manager/AFHTTPRequestSerializer+OAuth2.h>
 #import "LY2Constants.h"
 #import <GitHubOAuthController.h>
+#import "LY3RandomOctocatAPIClient.h"
+#import <Parse.h>
+#import <DLIL.h>
+#import <DLILOperation.h>
+#import <DLILCacheManager.h>
 
 @interface LoginViewController ()
 - (IBAction)githubButtonWasTapped:(id)sender;
+- (IBAction)invisibleButtonTapped:(id)sender;
+@property (nonatomic, strong) NSMutableArray *octocatURLsArray;
+@property (weak, nonatomic) IBOutlet DLImageView *octocatDLImageView;
+
+
+
 
 @end
 
@@ -25,6 +37,8 @@
     
     NSLog(@"Viewdidload called");
     // Do any additional setup after loading the view.
+    
+   
 }
 
 
@@ -91,6 +105,44 @@
                                                                                      } failure:nil];
     
     [oAuthController showModalFromController:self];
+}
+
+- (IBAction)invisibleButtonTapped:(id)sender {
+    PFQuery *octoQuery = [PFQuery queryWithClassName:@"octodex"];
+    [octoQuery getObjectInBackgroundWithId:@"WIENIhX2vV" block:^(PFObject *object, NSError *error) {
+        NSLog(@"PFObject (response object): %@", object);
+        [self randomizeOctocat:object];
+    }];
+    
+}
+
+-(void)randomizeOctocat:(PFObject*)object {
+    NSLog(@"PFObject = %@", object);
+    NSArray *octodex = object[@"octocatURLs"];
+    NSLog(@"octodex = %@", octodex);
+    NSUInteger random = (NSUInteger)[self randomFloatBetweenNumber:0 andNumber:octodex.count - 1];
+    NSString *randomOCatURL = octodex[random];
+    NSLog(@"Random0CatURL: %@", randomOCatURL);
+    [self.octocatDLImageView displayImageFromUrl:randomOCatURL];
+    
+//    DLImageLoader *imageLoader = [DLImageLoader sharedInstance];
+//    [imageLoader displayImageFromUrl:randomOCatURL imageView:self.octocatImageView];
+//   [imageLoader loadImageFromUrl:randomOCatURL completed:^(NSError *error, UIImage *image) {
+//       [self assignNewImage:image ToView:self.octocatImageView];
+//   }];
+    
+    
+//    self.octocatImage.image = [UIImage image]
+}
+
+    //      arc4random is 0 to it's MAX. divided by it's MAX gives you a percentage. Multiply that by the range, and then add that to the original quantity...
+-(CGFloat)randomFloatBetweenNumber:(CGFloat)minRange andNumber:(CGFloat)maxRange {
+    return ((float)arc4random() / ARC4RANDOM_MAX) * (maxRange - minRange); //+ minRange;
+}
+
+-(void)assignNewImage:(UIImage*)image ToView:(UIImageView*)imageView {
+    imageView.image = image;
+    [imageView reloadInputViews];
 }
 
 - (void)didReceiveMemoryWarning {
