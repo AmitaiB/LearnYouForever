@@ -18,7 +18,7 @@
 @interface LoginViewController ()
 - (IBAction)githubButtonWasTapped:(id)sender;
 - (IBAction)invisibleButtonTapped:(id)sender;
-@property (nonatomic, strong) NSArray *octocatURLs;
+@property (nonatomic, strong) NSMutableArray *octocatURLsArray;
 
 @end
 
@@ -101,25 +101,39 @@
 
 - (IBAction)invisibleButtonTapped:(id)sender {
     
-    if (!PFObjectDefaultPin) {
-        PFObject *octocatURLs = [PFObject objectWithClassName:@"OctocatURLs"];
+        PFObject *octocatURLsPF = [PFObject objectWithClassName:@"octodex"];
 //    }
 //
 //    if (!self.octocatURLs.count) {
         [LY3RandomOctocatAPIClient populateOctocatURLArrayWithCompletion:^(NSURLSessionDataTask *task, NSDictionary *octodex) {
-            NSMutableArray *octoURLs = [NSMutableArray new];
-            for (NSDictionary *octoDict in octodex[@"results"]) {
-                [octoURLs addObject:octoDict[@"preview_image"]];
-            }
-            octocatURLs[@"octodexArray"] = octoURLs;
-            [octocatURLs pinInBackground];
-            NSLog(@"octoURLs: %@!", [octoURLs description]);
+            [self populateURLArrayFromResponse:octodex];
+//            NSLog(@"Inside the completion block: octodex (response object): %@", [octodex description]);
+            octocatURLsPF[@"octocatURLs"] = self.octocatURLsArray;
+            [octocatURLsPF saveInBackground];
         }];
-    } else {
-        PFQuery *query = [PFQuery queryWithClassName:@"OctocatURLs"];
-        PFObject *octocatURLs = query.fromPin;
-        NSLog(@"octocatURLs Parse object: %@", octocatURLs);
+//            NSMutableArray *octoURLs = [NSMutableArray new];
+//            for (NSDictionary *octoDict in octodex[@"results"]) {
+//                [octoURLs addObject:octoDict[@"preview_image"]];
+//            }
+//            octocatURLs[@"octodexArray"] = octoURLs;
+//            [octocatURLs pinInBackground];
+//            NSLog(@"octoURLs: %@!", [octoURLs description]);
+//    } else {
+//        PFQuery *query = [PFQuery queryWithClassName:@"OctocatURLs"];
+//        PFObject *octocatURLs = query.fromPin;
+//        NSLog(@"octocatURLs Parse object: %@", octocatURLs);
+//    }
+}
+
+-(void)populateURLArrayFromResponse:(NSDictionary*)response {
+//    NSLog(@"Inside the populatemethod: response (response object): %@", [response description]);
+    NSMutableArray *temp = [NSMutableArray new];
+    for (NSDictionary *octoDict in response[@"results"]) {
+        NSLog(@"octoDict[@\"preview_image\"] is equal to: %@", octoDict[@"preview_image"]);
+        [temp addObject:octoDict[@"preview_image"]];
     }
+    self.octocatURLsArray = temp;
+    NSLog(@"self.octocatURLsArray in populateURLArrayFromResponse:\n%@", [self.octocatURLsArray description]);
 }
 
 - (void)didReceiveMemoryWarning {
