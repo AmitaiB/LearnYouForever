@@ -15,14 +15,16 @@
 #import <GitHubOAuthController.h>
 #import "LY3RandomOctocatAPIClient.h"
 #import <Parse.h>
-#import <DLImageLoader.h>
-#import <DLImageView.h>
+#import <DLIL.h>
+#import <DLILOperation.h>
+#import <DLILCacheManager.h>
 
 @interface LoginViewController ()
 - (IBAction)githubButtonWasTapped:(id)sender;
 - (IBAction)invisibleButtonTapped:(id)sender;
 @property (nonatomic, strong) NSMutableArray *octocatURLsArray;
-@property (weak, nonatomic) IBOutlet UIImageView *octocatImageView;
+@property (weak, nonatomic) IBOutlet DLImageView *octocatDLImageView;
+
 
 
 
@@ -115,15 +117,19 @@
 }
 
 -(void)randomizeOctocat:(PFObject*)object {
-    NSArray *octodex = object[@"results"][@"octocatURLs"];
+    NSLog(@"PFObject = %@", object);
+    NSArray *octodex = object[@"octocatURLs"];
+    NSLog(@"octodex = %@", octodex);
     NSUInteger random = (NSUInteger)[self randomFloatBetweenNumber:0 andNumber:octodex.count - 1];
     NSString *randomOCatURL = octodex[random];
+    NSLog(@"Random0CatURL: %@", randomOCatURL);
+    [self.octocatDLImageView displayImageFromUrl:randomOCatURL];
     
-    DLImageLoader *imageLoader = [DLImageLoader sharedInstance];
+//    DLImageLoader *imageLoader = [DLImageLoader sharedInstance];
 //    [imageLoader displayImageFromUrl:randomOCatURL imageView:self.octocatImageView];
-   [imageLoader loadImageFromUrl:randomOCatURL completed:^(NSError *error, UIImage *image) {
-       [self assignNewImage:image ToView:self.octocatImageView];
-   }];
+//   [imageLoader loadImageFromUrl:randomOCatURL completed:^(NSError *error, UIImage *image) {
+//       [self assignNewImage:image ToView:self.octocatImageView];
+//   }];
     
     
 //    self.octocatImage.image = [UIImage image]
