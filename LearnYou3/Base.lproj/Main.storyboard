@@ -182,6 +182,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="BhW-VD-nfa"/>
                     <connections>
+                        <outlet property="octactImageView" destination="g7k-C7-rR3" id="zA4-H0-TON"/>
+                        <outlet property="octocatImage" destination="g7k-C7-rR3" id="cIf-Zc-tdU"/>
+                        <outlet property="octocatImageView" destination="g7k-C7-rR3" id="4gw-rL-bh0"/>
                         <segue destination="pGg-6v-bdr" kind="show" identifier="logInToMasterSegueID" id="ECg-89-qJw"/>
                     </connections>
                 </viewController>

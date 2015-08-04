@@ -5,6 +5,7 @@
 //  Created by Amitai Blickstein on 7/30/15.
 //  Copyright (c) 2015 Amitai Blickstein, LLC. All rights reserved.
 //
+#define ARC4RANDOM_MAX 0x100000000
 
 #import "LoginViewController.h"
 #import <AFNetworking.h>
@@ -14,11 +15,16 @@
 #import <GitHubOAuthController.h>
 #import "LY3RandomOctocatAPIClient.h"
 #import <Parse.h>
+#import <DLImageLoader.h>
+#import <DLImageView.h>
 
 @interface LoginViewController ()
 - (IBAction)githubButtonWasTapped:(id)sender;
 - (IBAction)invisibleButtonTapped:(id)sender;
 @property (nonatomic, strong) NSMutableArray *octocatURLsArray;
+@property (weak, nonatomic) IBOutlet UIImageView *octocatImageView;
+
+
 
 @end
 
@@ -100,40 +106,37 @@
 }
 
 - (IBAction)invisibleButtonTapped:(id)sender {
+    PFQuery *octoQuery = [PFQuery queryWithClassName:@"octodex"];
+    [octoQuery getObjectInBackgroundWithId:@"WIENIhX2vV" block:^(PFObject *object, NSError *error) {
+        NSLog(@"PFObject (response object): %@", object);
+        [self randomizeOctocat:object];
+    }];
     
-        PFObject *octocatURLsPF = [PFObject objectWithClassName:@"octodex"];
-//    }
-//
-//    if (!self.octocatURLs.count) {
-        [LY3RandomOctocatAPIClient populateOctocatURLArrayWithCompletion:^(NSURLSessionDataTask *task, NSDictionary *octodex) {
-            [self populateURLArrayFromResponse:octodex];
-//            NSLog(@"Inside the completion block: octodex (response object): %@", [octodex description]);
-            octocatURLsPF[@"octocatURLs"] = self.octocatURLsArray;
-            [octocatURLsPF saveInBackground];
-        }];
-//            NSMutableArray *octoURLs = [NSMutableArray new];
-//            for (NSDictionary *octoDict in octodex[@"results"]) {
-//                [octoURLs addObject:octoDict[@"preview_image"]];
-//            }
-//            octocatURLs[@"octodexArray"] = octoURLs;
-//            [octocatURLs pinInBackground];
-//            NSLog(@"octoURLs: %@!", [octoURLs description]);
-//    } else {
-//        PFQuery *query = [PFQuery queryWithClassName:@"OctocatURLs"];
-//        PFObject *octocatURLs = query.fromPin;
-//        NSLog(@"octocatURLs Parse object: %@", octocatURLs);
-//    }
 }
 
--(void)populateURLArrayFromResponse:(NSDictionary*)response {
-//    NSLog(@"Inside the populatemethod: response (response object): %@", [response description]);
-    NSMutableArray *temp = [NSMutableArray new];
-    for (NSDictionary *octoDict in response[@"results"]) {
-        NSLog(@"octoDict[@\"preview_image\"] is equal to: %@", octoDict[@"preview_image"]);
-        [temp addObject:octoDict[@"preview_image"]];
-    }
-    self.octocatURLsArray = temp;
-    NSLog(@"self.octocatURLsArray in populateURLArrayFromResponse:\n%@", [self.octocatURLsArray description]);
+-(void)randomizeOctocat:(PFObject*)object {
+    NSArray *octodex = object[@"results"][@"octocatURLs"];
+    NSUInteger random = (NSUInteger)[self randomFloatBetweenNumber:0 andNumber:octodex.count - 1];
+    NSString *randomOCatURL = octodex[random];
+    
+    DLImageLoader *imageLoader = [DLImageLoader sharedInstance];
+//    [imageLoader displayImageFromUrl:randomOCatURL imageView:self.octocatImageView];
+   [imageLoader loadImageFromUrl:randomOCatURL completed:^(NSError *error, UIImage *image) {
+       [self assignNewImage:image ToView:self.octocatImageView];
+   }];
+    
+    
+//    self.octocatImage.image = [UIImage image]
+}
+
+    //      arc4random is 0 to it's MAX. divided by it's MAX gives you a percentage. Multiply that by the range, and then add that to the original quantity...
+-(CGFloat)randomFloatBetweenNumber:(CGFloat)minRange andNumber:(CGFloat)maxRange {
+    return ((float)arc4random() / ARC4RANDOM_MAX) * (maxRange - minRange); //+ minRange;
+}
+
+-(void)assignNewImage:(UIImage*)image ToView:(UIImageView*)imageView {
+    imageView.image = image;
+    [imageView reloadInputViews];
 }
 
 - (void)didReceiveMemoryWarning {
