@@ -15,3 +15,9 @@ POST /authorizations
 31 July AM
 
 4) Refactor AFHTTPSessionManager to be a singleton.
+
+
+Make method that returns pagination for a given request.
+Make a method that returns any given page, and returns it.
+Loop over that method.
+Done.

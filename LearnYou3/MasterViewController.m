@@ -40,7 +40,8 @@
     __block NSMutableArray *raw = [NSMutableArray new];
     __block NSUInteger pagination = 1;
     
-    [LY3GithubAPIClient getCurrentUserRepositoriesWithCompletion:^(NSURLSessionDataTask *task, NSArray *repos) {
+    [LY3GithubAPIClient requestCurrentUserRepositoriesWithCompletion:^(NSURLSessionDataTask *task, NSArray *repos)
+    {
             //Populates an array with the repos requested.
         for (NSDictionary *repo in repos) {
             [results addObject:repo[@"full_name"]];

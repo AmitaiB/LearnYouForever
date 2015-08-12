@@ -10,11 +10,12 @@
 
 @interface LY3GithubAPIClient : NSObject
 
-+(void)getMembershipforOrg:(NSString*)orgName WithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *repos))completionBlock;
-+(void)getRepositoriesforOrg:(NSString*)orgName WithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *repos))completionBlock;
-+(void)getRepositoriesforUser:(NSString*)userName WithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *repos))completionBlock;
-+(void)getCurrentUserRepositoriesWithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *repos))completionBlock;
-+(void)getRepositoriesForkedFromParentRepo:(NSString *)repoFullName WithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *repos))completionBlock;
++(void)requestMembershipforOrg:(NSString*)orgName options:(NSUInteger)LY_HTTPRequestType pagination:(NSUInteger)totalPages WithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *repos))completionBlock;
++(void)requestRepositoriesforOrg:(NSString*)orgName options:(NSUInteger)LY_HTTPRequestType WithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *repos))completionBlock;
++(void)requestRepositoriesforUser:(NSString*)userName options:(NSUInteger)LY_HTTPRequestType WithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *repos))completionBlock;
++(void)requestCurrentUserRepositoriesWithOptions:(NSUInteger)LY_HTTPRequestType WithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *repos))completionBlock;
++(void)requestRepositoriesForkedFromParentRepo:(NSString *)repoFullName options:(NSUInteger)LY_HTTPRequestType WithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *repos))completionBlock;
 
++(NSUInteger)paginationFromHeaderInDataTask:(NSURLSessionDataTask*)task;
 
 @end
