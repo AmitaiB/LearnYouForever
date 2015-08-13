@@ -6,17 +6,17 @@
 //  Copyright (c) 2015 Amitai Blickstein, LLC. All rights reserved.
 //
 
-#import "LY3RandomOctocatAPIClient.h"
-#import "LY2Constants.h"
+#import "LYFRandomOctocatAPIClient.h"
+#import "LYFConstants_v2.h"
 #import <AFNetworking/AFNetworking.h>
 #import <AFOAuth2Manager/AFOAuth2Manager.h>
 #import <AFOAuth2Manager/AFHTTPRequestSerializer+OAuth2.h>
 
-@interface LY3RandomOctocatAPIClient()
+@interface LYFRandomOctocatAPIClient()
 @property (nonatomic, strong) NSMutableArray *octocatURLs;
 @end
 
-@implementation LY3RandomOctocatAPIClient
+@implementation LYFRandomOctocatAPIClient
 
 +(void)populateOctocatURLArrayWithCompletion:(void (^)(NSURLSessionDataTask *task, NSDictionary *octodex))completionBlock{
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];

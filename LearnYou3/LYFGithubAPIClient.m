@@ -8,8 +8,8 @@
 /**
  *  sorry for the LY2 and LY3 confusion. We'll have to refactor this...
  */
-#import "LY3GithubAPIClient.h"
-#import "LY2Constants.h"
+#import "LYFGithubAPIClient.h"
+#import "LYFConstants_v2.h"
 #import <Regexer.h>
 #import <AFNetworking.h>
 #import <AFOAuth2Manager/AFOAuth2Manager.h>
@@ -17,7 +17,7 @@
 #define DBLG NSLog(@"%@ reporting!", NSStringFromSelector(_cmd));
 
 
-@implementation LY3GithubAPIClient
+@implementation LYFGithubAPIClient
 NSString *const GITHUB_API_baseURL = @"https://api.github.com";
 
 NSDictionary * defaultParams; //??? How could I implement this?

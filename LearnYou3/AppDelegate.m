@@ -9,7 +9,7 @@
 #import <Parse/Parse.h>
 #import "AppDelegate.h"
 #import "DetailViewController.h"
-#import "LY2Constants.h"
+#import "LYFConstants_v2.h"
 
 @interface AppDelegate ()
 

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LY2Constants : NSObject
+@interface LYFConstants_v2 : NSObject
 
 extern NSString * const GITHUB_CLIENT_ID;
 extern NSString * const GITHIB_CLIENT_SECRET;

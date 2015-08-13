@@ -11,9 +11,9 @@
 #import <AFNetworking.h>
 #import <AFOAuth2Manager/AFOAuth2Manager.h>
 #import <AFOAuth2Manager/AFHTTPRequestSerializer+OAuth2.h>
-#import "LY2Constants.h"
+#import "LYFConstants_v2.h"
 #import <GitHubOAuthController.h>
-#import "LY3RandomOctocatAPIClient.h"
+#import "LYFRandomOctocatAPIClient.h"
 #import <Parse.h>
 #import <DLIL.h>
 #import <DLILOperation.h>

@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		07006C791B6FA58C00B8C097 /* LY2Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 07006C781B6FA58C00B8C097 /* LY2Constants.m */; };
-		3872AAA11B6FFC790009D961 /* LY3RandomOctocatAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3872AAA01B6FFC790009D961 /* LY3RandomOctocatAPIClient.m */; };
-		38A79B1F1B6E780400C0C0A5 /* LY3GithubAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A79B1E1B6E780400C0C0A5 /* LY3GithubAPIClient.m */; };
+		07006C791B6FA58C00B8C097 /* LYFConstants_v2.m in Sources */ = {isa = PBXBuildFile; fileRef = 07006C781B6FA58C00B8C097 /* LYFConstants_v2.m */; };
+		3872AAA11B6FFC790009D961 /* LYFRandomOctocatAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3872AAA01B6FFC790009D961 /* LYFRandomOctocatAPIClient.m */; };
+		38A79B1F1B6E780400C0C0A5 /* LYFGithubAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 38A79B1E1B6E780400C0C0A5 /* LYFGithubAPIClient.m */; };
 		38B9283C1B6AF6F20069872B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38B9283B1B6AF6F20069872B /* LoginViewController.m */; };
 		38B928421B6B052B0069872B /* Notes to Selves.md in Resources */ = {isa = PBXBuildFile; fileRef = 38B928411B6B052B0069872B /* Notes to Selves.md */; };
 		38B928461B6BB17C0069872B /* Notes to LoginViewController in Resources */ = {isa = PBXBuildFile; fileRef = 38B928451B6BB17C0069872B /* Notes to LoginViewController */; };
@@ -36,21 +36,21 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		07006C781B6FA58C00B8C097 /* LY2Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY2Constants.m; sourceTree = "<group>"; };
-		386B8E741B6EC10200B53693 /* LY2Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LY2Constants.h; sourceTree = "<group>"; };
-		3872AA9F1B6FFC790009D961 /* LY3RandomOctocatAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY3RandomOctocatAPIClient.h; sourceTree = "<group>"; };
-		3872AAA01B6FFC790009D961 /* LY3RandomOctocatAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY3RandomOctocatAPIClient.m; sourceTree = "<group>"; };
-		38A79B1D1B6E780400C0C0A5 /* LY3GithubAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LY3GithubAPIClient.h; sourceTree = "<group>"; };
-		38A79B1E1B6E780400C0C0A5 /* LY3GithubAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LY3GithubAPIClient.m; sourceTree = "<group>"; };
+		07006C781B6FA58C00B8C097 /* LYFConstants_v2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYFConstants_v2.m; sourceTree = "<group>"; };
+		386B8E741B6EC10200B53693 /* LYFConstants_v2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LYFConstants_v2.h; sourceTree = "<group>"; };
+		3872AA9F1B6FFC790009D961 /* LYFRandomOctocatAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYFRandomOctocatAPIClient.h; sourceTree = "<group>"; };
+		3872AAA01B6FFC790009D961 /* LYFRandomOctocatAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYFRandomOctocatAPIClient.m; sourceTree = "<group>"; };
+		38A79B1D1B6E780400C0C0A5 /* LYFGithubAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LYFGithubAPIClient.h; sourceTree = "<group>"; };
+		38A79B1E1B6E780400C0C0A5 /* LYFGithubAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LYFGithubAPIClient.m; sourceTree = "<group>"; };
 		38B9283A1B6AF6F20069872B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		38B9283B1B6AF6F20069872B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		38B928411B6B052B0069872B /* Notes to Selves.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = "Notes to Selves.md"; sourceTree = "<group>"; };
 		38B928451B6BB17C0069872B /* Notes to LoginViewController */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Notes to LoginViewController"; sourceTree = "<group>"; };
-		38E97B171B6857370091BACA /* LearnYou3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnYou3.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E97B171B6857370091BACA /* LearnYouForever.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearnYouForever.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E97B281B6857370091BACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		38E97B2A1B6857370091BACA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		38E97B2D1B6857370091BACA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		38E97B331B6857370091BACA /* LearnYou3Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnYou3Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		38E97B331B6857370091BACA /* LearnYouForeverTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearnYouForeverTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		38E97B381B6857370091BACA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		38E97B391B6857370091BACA /* LearnYou3Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LearnYou3Tests.m; sourceTree = "<group>"; };
 		38E97B431B6857F30091BACA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,8 +99,8 @@
 		38E97B181B6857370091BACA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				38E97B171B6857370091BACA /* LearnYou3.app */,
-				38E97B331B6857370091BACA /* LearnYou3Tests.xctest */,
+				38E97B171B6857370091BACA /* LearnYouForever.app */,
+				38E97B331B6857370091BACA /* LearnYouForeverTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -113,10 +113,10 @@
 				38E97B441B6857F30091BACA /* AppDelegate.m */,
 				38E97B501B6858540091BACA /* MasterViewController.h */,
 				38E97B511B6858540091BACA /* MasterViewController.m */,
-				38A79B1D1B6E780400C0C0A5 /* LY3GithubAPIClient.h */,
-				38A79B1E1B6E780400C0C0A5 /* LY3GithubAPIClient.m */,
-				3872AA9F1B6FFC790009D961 /* LY3RandomOctocatAPIClient.h */,
-				3872AAA01B6FFC790009D961 /* LY3RandomOctocatAPIClient.m */,
+				38A79B1D1B6E780400C0C0A5 /* LYFGithubAPIClient.h */,
+				38A79B1E1B6E780400C0C0A5 /* LYFGithubAPIClient.m */,
+				3872AA9F1B6FFC790009D961 /* LYFRandomOctocatAPIClient.h */,
+				3872AAA01B6FFC790009D961 /* LYFRandomOctocatAPIClient.m */,
 				38E97B461B6858050091BACA /* DetailViewController.h */,
 				38E97B471B6858050091BACA /* DetailViewController.m */,
 				38B9283A1B6AF6F20069872B /* LoginViewController.h */,
@@ -134,8 +134,8 @@
 			isa = PBXGroup;
 			children = (
 				38E97B491B6858250091BACA /* Info.plist */,
-				386B8E741B6EC10200B53693 /* LY2Constants.h */,
-				07006C781B6FA58C00B8C097 /* LY2Constants.m */,
+				386B8E741B6EC10200B53693 /* LYFConstants_v2.h */,
+				07006C781B6FA58C00B8C097 /* LYFConstants_v2.m */,
 				38E97B4B1B68582E0091BACA /* main.m */,
 			);
 			name = "Supporting Files";
@@ -178,9 +178,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		38E97B161B6857370091BACA /* LearnYou3 */ = {
+		38E97B161B6857370091BACA /* LearnYouForever */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38E97B3D1B6857370091BACA /* Build configuration list for PBXNativeTarget "LearnYou3" */;
+			buildConfigurationList = 38E97B3D1B6857370091BACA /* Build configuration list for PBXNativeTarget "LearnYouForever" */;
 			buildPhases = (
 				2B9AC18CBFEE16A1DF551EA8 /* Check Pods Manifest.lock */,
 				38E97B131B6857370091BACA /* Sources */,
@@ -192,14 +192,14 @@
 			);
 			dependencies = (
 			);
-			name = LearnYou3;
+			name = LearnYouForever;
 			productName = LearnYou3;
-			productReference = 38E97B171B6857370091BACA /* LearnYou3.app */;
+			productReference = 38E97B171B6857370091BACA /* LearnYouForever.app */;
 			productType = "com.apple.product-type.application";
 		};
-		38E97B321B6857370091BACA /* LearnYou3Tests */ = {
+		38E97B321B6857370091BACA /* LearnYouForeverTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 38E97B401B6857370091BACA /* Build configuration list for PBXNativeTarget "LearnYou3Tests" */;
+			buildConfigurationList = 38E97B401B6857370091BACA /* Build configuration list for PBXNativeTarget "LearnYouForeverTests" */;
 			buildPhases = (
 				38E97B2F1B6857370091BACA /* Sources */,
 				38E97B301B6857370091BACA /* Frameworks */,
@@ -210,9 +210,9 @@
 			dependencies = (
 				38E97B351B6857370091BACA /* PBXTargetDependency */,
 			);
-			name = LearnYou3Tests;
+			name = LearnYouForeverTests;
 			productName = LearnYou3Tests;
-			productReference = 38E97B331B6857370091BACA /* LearnYou3Tests.xctest */;
+			productReference = 38E97B331B6857370091BACA /* LearnYouForeverTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -221,7 +221,7 @@
 		38E97B0F1B6857370091BACA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				CLASSPREFIX = LY3;
+				CLASSPREFIX = LYF;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Amitai Blickstein, LLC";
 				TargetAttributes = {
@@ -234,7 +234,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 38E97B121B6857370091BACA /* Build configuration list for PBXProject "LearnYou3" */;
+			buildConfigurationList = 38E97B121B6857370091BACA /* Build configuration list for PBXProject "LearnYouForever" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -247,8 +247,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				38E97B161B6857370091BACA /* LearnYou3 */,
-				38E97B321B6857370091BACA /* LearnYou3Tests */,
+				38E97B161B6857370091BACA /* LearnYouForever */,
+				38E97B321B6857370091BACA /* LearnYouForeverTests */,
 			);
 		};
 /* End PBXProject section */
@@ -315,11 +315,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				38E97B451B6857F30091BACA /* AppDelegate.m in Sources */,
-				38A79B1F1B6E780400C0C0A5 /* LY3GithubAPIClient.m in Sources */,
+				38A79B1F1B6E780400C0C0A5 /* LYFGithubAPIClient.m in Sources */,
 				38E97B521B6858540091BACA /* MasterViewController.m in Sources */,
 				38B9283C1B6AF6F20069872B /* LoginViewController.m in Sources */,
-				07006C791B6FA58C00B8C097 /* LY2Constants.m in Sources */,
-				3872AAA11B6FFC790009D961 /* LY3RandomOctocatAPIClient.m in Sources */,
+				07006C791B6FA58C00B8C097 /* LYFConstants_v2.m in Sources */,
+				3872AAA11B6FFC790009D961 /* LYFRandomOctocatAPIClient.m in Sources */,
 				38E97B4C1B68582E0091BACA /* main.m in Sources */,
 				38E97B481B6858050091BACA /* DetailViewController.m in Sources */,
 			);
@@ -338,7 +338,7 @@
 /* Begin PBXTargetDependency section */
 		38E97B351B6857370091BACA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 38E97B161B6857370091BACA /* LearnYou3 */;
+			target = 38E97B161B6857370091BACA /* LearnYouForever */;
 			targetProxy = 38E97B341B6857370091BACA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -450,7 +450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LearnYou3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LearnYouForever;
 			};
 			name = Debug;
 		};
@@ -461,7 +461,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = LearnYou3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LearnYouForever;
 			};
 			name = Release;
 		};
@@ -479,7 +479,7 @@
 				);
 				INFOPLIST_FILE = LearnYou3Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LearnYouForeverTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearnYou3.app/LearnYou3";
 			};
 			name = Debug;
@@ -494,7 +494,7 @@
 				);
 				INFOPLIST_FILE = LearnYou3Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = LearnYouForeverTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LearnYou3.app/LearnYou3";
 			};
 			name = Release;
@@ -502,7 +502,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		38E97B121B6857370091BACA /* Build configuration list for PBXProject "LearnYou3" */ = {
+		38E97B121B6857370091BACA /* Build configuration list for PBXProject "LearnYouForever" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38E97B3B1B6857370091BACA /* Debug */,
@@ -511,7 +511,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38E97B3D1B6857370091BACA /* Build configuration list for PBXNativeTarget "LearnYou3" */ = {
+		38E97B3D1B6857370091BACA /* Build configuration list for PBXNativeTarget "LearnYouForever" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38E97B3E1B6857370091BACA /* Debug */,
@@ -520,7 +520,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		38E97B401B6857370091BACA /* Build configuration list for PBXNativeTarget "LearnYou3Tests" */ = {
+		38E97B401B6857370091BACA /* Build configuration list for PBXNativeTarget "LearnYouForeverTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				38E97B411B6857370091BACA /* Debug */,

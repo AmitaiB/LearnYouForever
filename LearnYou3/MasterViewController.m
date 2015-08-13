@@ -9,7 +9,7 @@
 #import "MasterViewController.h"
 #import "DetailViewController.h"
 #import "LoginViewController.h"
-#import "LY3GithubAPIClient.h"
+#import "LYFGithubAPIClient.h"
 #import <Parse.h>
 #import <Regexer.h>
 #import <SWTableViewCell/SWTableViewCell.h>
@@ -40,7 +40,7 @@
     __block NSMutableArray *raw = [NSMutableArray new];
     __block NSUInteger pagination = 1;
     
-    [LY3GithubAPIClient requestCurrentUserRepositoriesWithCompletion:^(NSURLSessionDataTask *task, NSArray *repos)
+    [LYFGithubAPIClient requestCurrentUserRepositoriesWithCompletion:^(NSURLSessionDataTask *task, NSArray *repos)
     {
             //Populates an array with the repos requested.
         for (NSDictionary *repo in repos) {

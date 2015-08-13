@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "38E97B161B6857370091BACA"
-               BuildableName = "LearnYou3.app"
-               BlueprintName = "LearnYou3"
-               ReferencedContainer = "container:LearnYou3.xcodeproj">
+               BuildableName = "LearnYouForever.app"
+               BlueprintName = "LearnYouForever"
+               ReferencedContainer = "container:LearnYouForever.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "38E97B321B6857370091BACA"
-               BuildableName = "LearnYou3Tests.xctest"
-               BlueprintName = "LearnYou3Tests"
-               ReferencedContainer = "container:LearnYou3.xcodeproj">
+               BuildableName = "LearnYouForeverTests.xctest"
+               BlueprintName = "LearnYouForeverTests"
+               ReferencedContainer = "container:LearnYouForever.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "38E97B321B6857370091BACA"
-               BuildableName = "LearnYou3Tests.xctest"
-               BlueprintName = "LearnYou3Tests"
-               ReferencedContainer = "container:LearnYou3.xcodeproj">
+               BuildableName = "LearnYouForeverTests.xctest"
+               BlueprintName = "LearnYouForeverTests"
+               ReferencedContainer = "container:LearnYouForever.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "38E97B161B6857370091BACA"
-            BuildableName = "LearnYou3.app"
-            BlueprintName = "LearnYou3"
-            ReferencedContainer = "container:LearnYou3.xcodeproj">
+            BuildableName = "LearnYouForever.app"
+            BlueprintName = "LearnYouForever"
+            ReferencedContainer = "container:LearnYouForever.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "38E97B161B6857370091BACA"
-            BuildableName = "LearnYou3.app"
-            BlueprintName = "LearnYou3"
-            ReferencedContainer = "container:LearnYou3.xcodeproj">
+            BuildableName = "LearnYouForever.app"
+            BlueprintName = "LearnYouForever"
+            ReferencedContainer = "container:LearnYouForever.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "38E97B161B6857370091BACA"
-            BuildableName = "LearnYou3.app"
-            BlueprintName = "LearnYou3"
-            ReferencedContainer = "container:LearnYou3.xcodeproj">
+            BuildableName = "LearnYouForever.app"
+            BlueprintName = "LearnYouForever"
+            ReferencedContainer = "container:LearnYouForever.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

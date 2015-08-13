@@ -1,55 +1,50 @@
 PODS:
-  - AFNetworking (2.5.4):
-    - AFNetworking/NSURLConnection (= 2.5.4)
-    - AFNetworking/NSURLSession (= 2.5.4)
-    - AFNetworking/Reachability (= 2.5.4)
-    - AFNetworking/Security (= 2.5.4)
-    - AFNetworking/Serialization (= 2.5.4)
-    - AFNetworking/UIKit (= 2.5.4)
-  - AFNetworking/NSURLConnection (2.5.4):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.5.4):
-    - AFNetworking/Reachability
-    - AFNetworking/Security
-    - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.5.4)
-  - AFNetworking/Security (2.5.4)
-  - AFNetworking/Serialization (2.5.4)
-  - AFNetworking/UIKit (2.5.4):
-    - AFNetworking/NSURLConnection
-    - AFNetworking/NSURLSession
-  - AFOAuth2Manager (2.2.0):
-    - AFNetworking/NSURLConnection (~> 2.2)
+  - AFNetworking (1.3.4)
   - Bolts/Tasks (1.2.0)
   - DLImageLoader (2.1.0)
   - GitHubOAuthController (0.1)
+  - ISO8601DateFormatter (0.7)
+  - Mantle (1.3.1):
+    - Mantle/extobjc (= 1.3.1)
+  - Mantle/extobjc (1.3.1)
+  - OctoKit (0.5):
+    - AFNetworking (~> 1.3.3)
+    - ISO8601DateFormatter (~> 0.7.0)
+    - Mantle (~> 1.3.1)
+    - ReactiveCocoa (~> 2.2.2)
   - Parse (1.7.5.3):
     - Bolts/Tasks (>= 1.2.0)
   - ParseUI (1.1.4):
     - Parse (~> 1.7)
+  - ReactiveCocoa (2.2.4):
+    - ReactiveCocoa/Core (= 2.2.4)
+    - ReactiveCocoa/no-arc (= 2.2.4)
+  - ReactiveCocoa/Core (2.2.4):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.2.4)
   - Regexer (1.3.1)
   - SWTableViewCell (0.3.7)
 
 DEPENDENCIES:
-  - AFNetworking
-  - AFOAuth2Manager
   - DLImageLoader (~> 2.1)
   - GitHubOAuthController
+  - OctoKit
   - Parse
   - ParseUI
   - Regexer (~> 1.3)
   - SWTableViewCell
 
 SPEC CHECKSUMS:
-  AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
-  AFOAuth2Manager: 952eb62e8fd8022971e64c6e8fe28b9e999224af
+  AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
   Bolts: d176cb1e0012175589e389a9db49b85e27787576
   DLImageLoader: daefd5673b51f96bb2dbd4987cc52c149ac123f1
   GitHubOAuthController: 6d147f984e1ce5863b522ee3fb7a453468102974
+  ISO8601DateFormatter: ab926648eebe497f4d167c0fd083992f959f1274
+  Mantle: a516570b84c3cefb34b02647a6588a087dddc490
+  OctoKit: 0ecbb097747eb801582dc89e34dbacc24d8ec1d1
   Parse: 373adbb1ad2e34d383542c3b28f678c49ebe4881
   ParseUI: d1228541b02a36a7354c8f47747f5f7a89cf1ff0
+  ReactiveCocoa: 78d9d1057f6e2595a67285b5adb0c90d0fc2237c
   Regexer: c8f2bbfe832a8ec1e728b525e0b9ac814513d827
   SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
 

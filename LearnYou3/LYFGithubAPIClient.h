@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LY3GithubAPIClient : NSObject
+@interface LYFGithubAPIClient : NSObject
 
 +(void)requestMembershipforOrg:(NSString*)orgName options:(NSUInteger)LY_HTTPRequestType pagination:(NSUInteger)totalPages WithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *repos))completionBlock;
 +(void)requestRepositoriesforOrg:(NSString*)orgName options:(NSUInteger)LY_HTTPRequestType WithCompletion:(void (^)(NSURLSessionDataTask *task, NSArray *repos))completionBlock;

@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
-@interface LY3RandomOctocatAPIClient : NSObject
+@interface LYFRandomOctocatAPIClient : NSObject
 
 +(void)populateOctocatURLArrayWithCompletion:(void (^)(NSURLSessionDataTask *task, NSDictionary *octodex))completionBlock;
 
